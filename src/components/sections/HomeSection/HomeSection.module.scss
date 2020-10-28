@@ -5,9 +5,9 @@
 .home {
   background-color: $light-gray;
   position: relative;
-  background-attachment: fixed;
-  background-position: 50%;
-  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: rem(650px);
+  overflow: hidden;
 }
 
 .container {

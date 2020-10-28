@@ -1,16 +1,28 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import PropTypes from "prop-types";
 
 import "../../scss/index.scss";
 import style from "./Header.module.scss";
 import Logo from "../Logo";
 import NavBarItem from "../NavBarItem";
-import PropTypes from "prop-types";
 import HamburgerMenu from "../HamburgerMenu";
 import ThemeMode from "../ThemeMode";
 
 const Header = ({ state }) => {
+  const [isFixedHeader, setIsFixedHeader] = useState(false);
+  
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        setIsFixedHeader(true);
+      } else {
+        setIsFixedHeader(false);
+      }
+    });
+  }, [isFixedHeader]);
+  
   return (
-    <header className={style.header}>
+    <header className={isFixedHeader ? style.headerFixed : style.header}>
       <div className={`container ${style.container}`}>
         <div className={style.logo}>
           <Logo />

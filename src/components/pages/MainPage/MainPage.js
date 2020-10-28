@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import style from "./MainPage.module.scss";
-import Header from "../../Header";
 import HomeSection from "../../sections/HomeSection";
 import WorksSection from "../../sections/WorksSection";
 import SkillsSection from "../../sections/SkillsSection";
@@ -14,7 +13,6 @@ import Footer from "../../Footer";
 const MainPage = ({ state }) => {
   return (
     <div className="wrapper">
-      <Header state={state} />
       <main className={style.main}>
         <HomeSection state={state} />
         <WorksSection state={state} />

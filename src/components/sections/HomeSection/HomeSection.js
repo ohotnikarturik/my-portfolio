@@ -6,10 +6,12 @@ import style from "./HomeSection.module.scss";
 import SectionTitle from "../../SectionTitle";
 import SocialsItem from "../../SocialsItem";
 import ArrowDown from "../../ArrowDown";
+import Header from "../../Header";
 
 const HomeSection = ({ state }) => {
   return (
-    <section className={`section ${style.home}`} title="Home">
+    <section className={style.home} title="Home">
+      <Header state={state} />
       <div className={`container ${style.container}`}>
         <div className={style.desc}>
           <div className={style.descGreeting}>
@@ -19,7 +21,7 @@ const HomeSection = ({ state }) => {
             <h1 className={style.titleName}>Artur.</h1>
           </div>
           <div className={style.profession}>
-            <SectionTitle title={"Web Developer"} />
+            <SectionTitle title={"Full Stack Developer"} />
           </div>
           <div className={style.socials}>
             <ul className={style.list}>
