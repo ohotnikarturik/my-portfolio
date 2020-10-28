@@ -1,0 +1,47 @@
+@import "../../../scss/config/mixins";
+@import "../../../scss/config/function";
+@import "../../../scss/config/variables";
+
+.skills {
+  height: 70vh;
+  min-height: rem(300px);
+  background-color: $blue;
+
+  @include phones {
+    height: 70vh;
+  }
+}
+
+.container {
+  padding-top: rem(40px);
+}
+
+.title {
+  @include tablets {
+    @include flex($justify: space-evenly);
+    margin-bottom: rem(60px);
+  }
+}
+
+.content {
+  //padding: rem(50px) 0;
+  @include flex(column);
+  height: 70%;
+}
+
+.list {
+  @include flex($justify: space-between);
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+
+  @include tablets {
+    @include flex($justify: space-evenly);
+  }
+
+  @include phones {
+    @include flex($justify: space-evenly);
+    flex-wrap: wrap;
+  }
+}
+

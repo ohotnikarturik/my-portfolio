@@ -1,0 +1,115 @@
+@import "../../../scss/config/mixins";
+@import "../../../scss/config/function";
+@import "../../../scss/config/variables";
+
+.singleBlog {
+  min-height: 100vh;
+  padding: rem(80px) 0;
+}
+.container {
+  padding-top: rem(40px);
+}
+
+.title {
+  margin-bottom: rem(60px);
+}
+
+.content {
+  @include flex(column);
+  height: 100%;
+  margin-right: rem(-15px);
+  margin-left: rem(-15px);
+}
+
+.list {
+  @include flex(column, center, initial);
+  width: 100%;
+  margin-bottom: rem(80px);
+
+  @include phones {
+    @include flex(column, center, center);
+  }
+}
+
+
+.item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-left: rem(15px);
+  padding-right: rem(15px);
+  height: rem(550px);
+
+  @include phones {
+    width: 90%;
+    height: rem(450px);
+  }
+}
+
+.itemContainer {
+  @include flex(column);
+  box-shadow: 0 0 rem(10px) rem(-3px) $black;
+  border-radius: rem(5px);
+  height: 100%;
+  transition: all .3s;
+  width: 100%;
+  overflow: hidden;
+}
+
+.img, .innerContent {
+  width: 100%;
+  height: 100%;
+}
+
+.imgPic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.innerContent {
+  @include flex(row-reverse, space-between);
+  padding: rem(20px);
+  height: 100%;
+  width: 100%;
+}
+
+.date {
+  @include flex();
+  margin-bottom: rem(5px);
+  color: $blue;
+  @include glacial(regularItalic);
+}
+
+.datePic {
+  margin-right: rem(10px);
+}
+
+.subtitle {
+  margin-bottom: rem(10px);
+}
+
+.desc {
+  width: 100%;
+}
+
+.descList {
+  width: 100%;
+  margin-bottom: rem(80px);
+  @include flex(column);
+
+  @include phones {
+    @include flex(column);
+  }
+}
+
+.paginationTop {
+  margin-bottom: rem(60px);
+}
+
+.paginationBottom {
+  @include flex();
+}
+
+.paginationList {
+  @include flex();
+}

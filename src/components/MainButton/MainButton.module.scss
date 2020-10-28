@@ -1,0 +1,44 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.mainButton {
+  min-width: rem(150px);
+  background-color: $blue;
+  padding: rem(10px) rem(10px);
+  transition: all 0.3s;
+  color: $white;
+  cursor: pointer;
+  outline: none;
+  border-radius: rem(5px);
+  border: rem(1px) solid $blue;
+  text-align: center;
+  display: block;
+
+  &:hover {
+    background-color: darken($blue, 10%);
+  }
+}
+
+.mainButton_reset {
+  background-color: $white;
+  min-width: rem(100px);
+  padding: rem(10px) rem(10px);
+  transition: all 0.3s;
+  color: $blue;
+  cursor: pointer;
+  outline: none;
+  border-radius: rem(5px);
+  border: rem(1px) solid $white;
+  text-align: center;
+  display: block;
+
+  &:hover {
+    background-color: darken($white, 5%);
+    border: rem(1px) solid darken($white, 5%);
+  }
+
+  @include phones {
+    margin-bottom: rem(40px);
+  }
+}

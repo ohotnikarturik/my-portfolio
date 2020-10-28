@@ -1,0 +1,51 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.descItem {
+  flex: 0 0 70%;
+  width: 70%;
+  padding-left: rem(15px);
+  padding-right: rem(15px);
+  margin-bottom: rem(20px);
+
+  @include tablets {
+    flex: 0;
+    max-width: 100%;
+    width: 80%;
+  }
+
+  @include phones {
+    flex: 0;
+    max-width: 100%;
+    width: 90%;
+  }
+}
+
+.descItem_position_left {
+  margin-left: auto;
+
+  @include phones {
+    margin-left: 0;
+  }
+}
+
+.descContainer {
+  @include flex(column, flex-start, flex-start);
+  box-shadow: 0 0 rem(10px) rem(-3px) $black;
+  border-radius: rem(5px);
+  height: 100%;
+  transition: all .3s;
+  width: 100%;
+  overflow: hidden;
+  padding: rem(20px);
+
+  @include phones {
+    @include flex(column, flex-start, center)
+  }
+}
+
+.descTitle {
+  margin-bottom: rem(20px);
+}
+

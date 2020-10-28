@@ -1,0 +1,37 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.arrowRight {
+  width: rem(30px);
+  height: rem(30px);
+  fill: $blue;
+  transition: all .3s;
+
+  &:hover {
+    fill: darken($blue, 10%);
+  }
+
+  &_size-direction_small-right {
+    width: rem(15px);
+    height: rem(15px);
+    fill: $white;
+
+    &:hover {
+      fill: $white;
+    }
+  }
+
+  &_size-direction_small-left {
+    width: rem(15px);
+    height: rem(15px);
+    transform: rotate(180deg);
+    fill: $white;
+
+    &:hover {
+      fill: $white;
+    }
+  }
+
+}
+

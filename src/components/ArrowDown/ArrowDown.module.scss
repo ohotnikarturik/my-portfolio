@@ -1,0 +1,20 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.arrow {
+  width: rem(40px);
+  height: rem(40px);
+  fill: $blue;
+  transition: all .3s;
+
+  &:hover {
+    fill: darken($blue, 10%);
+    transform: scale(1.1, 1.1);
+  }
+
+  @include phones {
+    display: none;
+  }
+}
+

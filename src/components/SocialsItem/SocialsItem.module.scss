@@ -1,0 +1,31 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.item {
+  margin-left: rem(25px);
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.img {
+  width: rem(20px);
+  height: rem(20px);
+  fill: $blue;
+  transition: all .3s;
+
+  &:hover {
+    fill: darken($blue, 10%);
+    transform: scale(1.1, 1.1);
+  }
+
+  &_color_white {
+    fill: $white;
+
+    &:hover {
+      fill: darken($white, 10%);
+    }
+  }
+}

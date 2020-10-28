@@ -1,0 +1,36 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.paginationArrow {
+  margin: 0 rem(10px);
+  @include flex();
+  @include circle(rem(30px), $blue);
+  transition: all .3s;
+
+  &:hover {
+    background-color: darken($blue, 10%);
+  }
+}
+.arrowRightPagination {
+  width: rem(15px);
+  height: rem(15px);
+  fill: $white;
+  transition: all .3s;
+
+  &:hover {
+    fill: $white;
+  }
+}
+
+.arrowLeftPagination {
+  width: rem(15px);
+  height: rem(15px);
+  transform: rotate(180deg);
+  fill: $white;
+
+  &:hover {
+    fill: $white;
+  }
+}
+

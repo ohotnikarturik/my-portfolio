@@ -1,0 +1,52 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.footer {
+  background-color: $black;
+  width: 100%;
+  height: rem(160px);
+}
+
+.container {
+  @include flex($justify: space-between);
+
+  @include tablets {
+    @include  flex(column);
+  }
+}
+
+
+.socials, .copyright, .ogo {
+  width: 33.33%;
+}
+
+.socials {
+  @include  flex($justify: flex-start);
+
+  @include tablets {
+    margin-bottom: rem(20px);
+    @include  flex($justify: center);
+  }
+}
+
+.list {
+  display: flex;
+}
+
+.copyright {
+  @include  flex();
+  width: 100%;
+}
+
+.copyrightText {
+  color: $white;
+}
+
+.logo {
+  @include  flex($justify: flex-end);
+
+  @include tablets {
+    display: none;
+  }
+}

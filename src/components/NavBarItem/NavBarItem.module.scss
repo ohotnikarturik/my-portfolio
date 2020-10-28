@@ -1,0 +1,33 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.item {
+  margin-right: rem(40px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.link {
+  color: $black;
+  font-size: rem(18px);
+  @include glacial();
+
+  &:after {
+    display: block;
+    content: '';
+    border-bottom: rem(1px) solid $blue;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+  }
+
+  &_active {
+    color: $blue;
+  }
+}

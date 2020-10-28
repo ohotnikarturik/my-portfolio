@@ -1,0 +1,43 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables"
+;
+.logo {
+  background-color: $red;
+  padding: rem(5px) rem(20px);
+  border-radius: rem(20px) 0 rem(20px) 0;
+  display: inline-block;
+  width: rem(120px);
+  text-align: center;
+}
+
+.logo_color_white {
+  background-color: $white;
+  color: $red;
+  padding: rem(5px) rem(20px);
+  border-radius: rem(20px) 0 rem(20px) 0;
+  display: inline-block;
+  width: rem(120px);
+  text-align: center;
+}
+
+.text {
+  color: $white;
+  font-size: rem(26px);
+  font-weight: bold;
+  @include oswald(bold);
+  letter-spacing: rem(2px);
+
+  &_color_red {
+    color: $red;
+
+  }
+}
+
+.text_color_red {
+  color: $red;
+  font-size: rem(26px);
+  font-weight: bold;
+  @include oswald(bold);
+  letter-spacing: rem(2px);
+}

@@ -1,0 +1,18 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.sectionTitle {
+  font-size: rem(36px);
+  @include glacial(bold);
+}
+
+.sectionTitle_color_white  {
+  font-size: rem(36px);
+  @include glacial(bold);
+  color: $white;
+
+  @include tablets {
+    text-align: center;
+  }
+}

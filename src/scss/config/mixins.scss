@@ -1,0 +1,129 @@
+//oswald fonts
+@mixin oswald($style: regular) {
+  font-family: 'oswald', Helvetica, sans-serif;
+
+  @if ($style == bold) {
+    font-style: normal;
+    font-weight: 900;
+  }
+
+  @if ($style == boldItalic) {
+    font-style: italic;
+    font-weight: 900;
+  }
+
+  @if ($style == medium) {
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  @if ($style == mediumItalic) {
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  @if ($style == regular) {
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @if ($style == regularItalic) {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  @if ($style == light) {
+    font-style: normal;
+    font-weight: 200;
+  }
+
+  @if ($style == lightItalic) {
+    font-style: italic;
+    font-weight: 200;
+  }
+}
+
+//glacial fonts
+@mixin glacial($style: regular) {
+  font-family: 'glacial', sans-serif, Helvetica;
+
+  @if ($style == bold) {
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  @if ($style == regular) {
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  @if ($style == regularItalic) {
+    font-style: italic;
+    font-weight: 300;
+  }
+}
+
+//circle
+@mixin circle ($width, $color) {
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+  background-color: $color;
+}
+
+// circle for menu
+@mixin circle ($width, $color) {
+  width: $width;
+  height: $width;
+  background-color: $color;
+  border-radius: $width/2;
+}
+
+
+// placeholder
+@mixin placeColor($color: #000000) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    opacity: .7;
+    @include glacial(regularItalic);
+  }
+  &:-moz-placeholder {
+    color: $color;
+    opacity: .7;
+    @include glacial(regularItalic);
+  }
+  &::-moz-placeholder {
+    color: $color;
+    opacity: .7;
+    @include glacial(regularItalic);
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    opacity: .7;
+    @include glacial(regularItalic);
+  }
+}
+
+//flex properties
+@mixin flex($direction: row, $justify:center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+//responsive media
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}
+
+
+

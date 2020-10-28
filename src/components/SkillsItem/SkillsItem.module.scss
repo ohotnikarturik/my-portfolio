@@ -1,0 +1,28 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.item {
+  margin-bottom: rem(20px);
+  transition: all .3s;
+
+  &:hover {
+    fill: darken($white, 10%);
+    transform: scale(1.1, 1.1);
+  }
+
+  @include phones {
+    width: 50%;
+  }
+}
+
+.link {
+  @include flex(column, space-around);
+}
+
+.img {
+  width: rem(60px);
+  height: rem(60px);
+  fill: $white;
+  margin-bottom: rem(20px);
+}

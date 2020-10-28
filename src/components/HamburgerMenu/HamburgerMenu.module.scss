@@ -1,0 +1,25 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.hamburgerMenu {
+  display: none;
+
+  @include tablets {
+    display: block;
+  }
+}
+
+.item {
+  display: block;
+  background-color: $black;
+  width: rem(40px);
+  height: rem(5px);
+  margin-bottom: rem(7px);
+  border-radius: rem(5px);
+
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.clock {
+  width: rem(15px);
+  height: rem(15px);
+  fill: $blue;
+}

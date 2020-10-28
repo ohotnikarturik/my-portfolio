@@ -1,0 +1,10 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.img {
+  display: flex;
+  width: rem(25px);
+  height: rem(25px);
+  fill: $orange;
+}

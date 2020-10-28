@@ -1,0 +1,44 @@
+@import "../../../scss/config/mixins";
+@import "../../../scss/config/function";
+@import "../../../scss/config/variables";
+
+.allBlogs {
+  min-height: 100vh;
+  padding: rem(80px) 0;
+}
+
+.container {
+  padding-top: rem(40px);
+}
+
+.title {
+  margin-bottom: rem(60px);
+}
+
+.content {
+  @include flex(column);
+  height: 100%;
+  margin-right: rem(-15px);
+  margin-left: rem(-15px);
+}
+
+.paginationList {
+  @include flex();
+}
+
+.list {
+  @include flex(column);
+  width: 100%;
+  margin-bottom: rem(40px);
+}
+
+.paginationTop {
+  margin-bottom: rem(60px);
+  @include flex();
+}
+
+.paginationBottom {
+  @include flex();
+}
+
+

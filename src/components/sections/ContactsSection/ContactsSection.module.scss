@@ -1,0 +1,93 @@
+@import "../../../scss/config/mixins";
+@import "../../../scss/config/function";
+@import "../../../scss/config/variables";
+
+.contacts {
+  background-color: $light-gray;
+}
+
+.container {
+  padding-top: rem(40px);
+}
+
+.content {
+  @include flex(column);
+  height: 100%;
+  //margin-right: rem(-15px);
+  //margin-left: rem(-15px);
+}
+
+.form {
+  @include flex(column);
+  height: 100%;
+  width: 100%;
+}
+
+.label {
+  width: 100%;
+  @include flex();
+  margin-bottom: rem(20px);
+}
+
+.input {
+  padding: rem(10px);
+  outline: none;
+  border: rem(1px) solid $white;
+  transition: all .3s;
+  @include placeColor($blue);
+  border-radius: rem(5px);
+  width: 40%;
+
+  &:focus {
+    border: rem(1px) solid $blue;
+  }
+
+  @include tablets {
+    width: 60%;
+  }
+
+  @include phones {
+    width: 90%;
+  }
+}
+
+.textarea {
+  padding: rem(10px);
+  outline: none;
+  resize: none;
+  height: rem(150px);
+  transition: all .3s;
+  border: rem(1px) solid $white;
+  @include placeColor($blue);
+  border-radius: rem(5px);
+  width: 40%;
+  margin: rem(30px) 0;
+
+  &:focus {
+    border: rem(1px) solid $blue;
+  }
+
+  @include tablets {
+    width: 60%;
+  }
+
+  @include phones {
+    width: 90%;
+  }
+}
+
+.mainButton {
+  width: 40%;
+  @include flex($justify: space-between);
+
+  @include tablets {
+    width: 60%;
+  }
+
+  @include phones {
+    width: 90%;
+    @include flex(column);
+    margin-bottom: rem(80px);
+  }
+}
+

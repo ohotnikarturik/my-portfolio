@@ -1,0 +1,19 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.paginationLink {
+  @include flex();
+  margin: 0 rem(10px);
+  @include circle(rem(30px), $blue);
+  color: $white;
+  transition: all .3s;
+
+  &:hover {
+    background-color: darken($blue, 10%);
+  }
+
+  &_active {
+    @include circle(rem(30px), darken($blue, 30%));
+  }
+}

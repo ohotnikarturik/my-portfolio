@@ -1,0 +1,43 @@
+@import "../../../scss/config/mixins";
+@import "../../../scss/config/function";
+@import "../../../scss/config/variables";
+
+.works {
+  @include tablets {
+    height: 100%;
+    min-height: 100vh;
+  }
+}
+
+.container {
+  padding-top: rem(40px);
+}
+
+.title {
+  @include tablets {
+    margin-bottom: 60px;
+  }
+}
+
+.content {
+  @include flex(column);
+  height: 100%;
+  margin-right: rem(-15px);
+  margin-left: rem(-15px);
+}
+
+.list {
+  @include flex();
+  width: 100%;
+  margin-bottom: rem(20px);
+
+  @include tablets {
+    @include flex(column);
+  }
+}
+
+.mainButton {
+  @include tablets {
+    margin-bottom: 60px;
+  }
+}
