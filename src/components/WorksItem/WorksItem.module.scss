@@ -32,6 +32,7 @@
   padding: rem(20px);
   transition: all .3s;
   overflow: hidden;
+  background-color: $white;
 
   &:hover {
     transform: scale(1.02, 1.02);

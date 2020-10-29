@@ -3,8 +3,11 @@
 @import "../../../scss/config/variables";
 
 .home {
-  background-color: $light-gray;
+  background-color: $white;
   position: relative;
+  //background-attachment: fixed;
+  //background-position: 50%;
+  //background-repeat: no-repeat;
   height: 100vh;
   min-height: rem(650px);
   overflow: hidden;
@@ -16,6 +19,7 @@
 
   @include tablets {
     @include flex(column, space-evenly);
+    padding-top: rem(80px) !important;
   }
 }
 
@@ -35,12 +39,30 @@
 }
 
 .titleName {
-  font-size: rem(50px);
+  font-size: rem(45px);
   @include glacial(bold);
 }
 
 .profession {
-  margin-bottom: rem(30px);
+  margin-bottom: rem(10px);
+}
+
+.markContainer {
+  display: flex;
+  align-items: center;
+  margin: 0 0 rem(25px) 0;
+}
+
+.markImg {
+  fill: $orange;
+  margin-left: rem(10px);
+  width: rem(20px);
+  height: rem(20px);
+}
+
+.markTitle {
+  @include glacial();
+  font-size: rem(18px);
 }
 
 .desc {

@@ -8,7 +8,7 @@ import WorksItem from "../../WorksItem";
 
 const WorksSection = ({ state }) => {
   return (
-    <section className={`section ${style.works}`} title="Works">
+    <section id="Works" className={`section ${style.works}`} title="Works">
       <div className={`container ${style.container}`}>
         <div className={style.title}>
           <SectionTitle title={"My Works."} />

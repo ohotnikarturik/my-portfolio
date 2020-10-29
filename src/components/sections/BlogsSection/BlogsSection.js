@@ -8,7 +8,7 @@ import BlogsItem from "../../BlogsItem";
 
 const BlogsSection = ({ state }) => {
   return (
-    <section className={`section ${style.blogs}`} title="Blogs">
+    <section id="Blogs" className={`section ${style.blogs}`} title="Blogs">
       <div className={`container ${style.container}`}>
         <div className={style.title}>
           <SectionTitle title={"My Blogs."} />

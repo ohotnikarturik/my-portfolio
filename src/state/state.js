@@ -4,7 +4,7 @@ const state = {
     { id: 2, name: "Works" },
     { id: 3, name: "Skills" },
     { id: 4, name: "Blogs" },
-    { id: 5, name: "Contacts" },
+    { id: 5, name: "Contact" },
   ],
   socials: [
     { id: 1, ariaLabel: "Link to linkedin", img: "in" },

@@ -7,10 +7,10 @@ import MainButton from "../../MainButton";
 
 const ContactsSection = () => {
   return (
-    <section className={`section ${style.contacts}`} title="Contacts">
+    <section id="Contact" className={`section ${style.contacts}`} title="Contacts">
       <div className={`container ${style.container}`}>
         <div className={style.title}>
-          <SectionTitle title={"Contacts."} />
+          <SectionTitle title={"Contact."} />
         </div>
         <div className={style.content}>
           <form className={style.form}>

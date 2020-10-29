@@ -7,7 +7,7 @@ import SkillsItem from "../../SkillsItem";
 
 const SkillsSection = ({ state }) => {
   return (
-    <section className={`section ${style.skills}`} title="Skills">
+    <section id="Skills" className={`section ${style.skills}`} title="Skills">
       <div className={`container ${style.container}`}>
         <div className={style.title}>
           <SectionTitle title={"My Skills."} classModifier />
