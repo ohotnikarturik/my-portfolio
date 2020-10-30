@@ -4,10 +4,11 @@ import PropTypes from "prop-types";
 import style from "./SocialsItem.module.scss";
 import sprite from "../../assets/img/sprite.svg";
 
-const SocialsItem = ({ ariaLabel, img }) => {
+const SocialsItem = ({ ariaLabel, img, link }) => {
+  console.log(link)
   return (
     <li className={style.item}>
-      <a href="#" className={style.link} target="_blank" aria-label={ariaLabel}>
+      <a href={link} className={style.link} rel="noreferrer" target="_blank" aria-label={ariaLabel}>
         <svg className={style.img}>
           <use href={`${sprite}#${img}`} />
         </svg>
@@ -19,6 +20,7 @@ const SocialsItem = ({ ariaLabel, img }) => {
 SocialsItem.propTypes = {
   ariaLabel: PropTypes.string,
   img: PropTypes.string,
+  link: PropTypes.string,
 };
 
 export default SocialsItem;

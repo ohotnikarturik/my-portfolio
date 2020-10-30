@@ -5,7 +5,7 @@
 .header {
   width: 100%;
   height: rem(80px);
-  box-shadow: 0 0 rem(10px) rem(-5px) $black;
+  box-shadow: 0 0 rem(10px) rem(-7px) $black;
   position: absolute;
   z-index: 1001;
 }
@@ -26,6 +26,10 @@
 .container {
   display: flex;
   align-items: center;
+}
+
+.logo_notVisible {
+ display: none;
 }
 
 .nav {

@@ -1,20 +1,28 @@
 import React from "react";
+import { Link } from "react-scroll";
 import PropTypes from "prop-types";
 
 import style from "./Logo.module.scss";
 
 const Logo = ({ label, classModifier, classModifierText }) => {
   return (
-    <a href="#" className={classModifier ? style.logo_color_white : style.logo}>
-      <span className={classModifierText ? style.text_color_red : style.text}>{label}</span>
-    </a>
+    <Link
+      to={"Home"}
+      smooth={true}
+      duration={500}
+      className={classModifier ? style.logo_color_white : style.logo}
+    >
+      <span className={classModifierText ? style.text_color_red : style.text}>
+        {label}
+      </span>
+    </Link>
   );
 };
 
 Logo.defaultProps = {
   label: "Artur.",
   classModifier: false,
-  classModifierText: false
+  classModifierText: false,
 };
 
 Logo.propTypes = {

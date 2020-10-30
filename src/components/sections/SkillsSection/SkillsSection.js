@@ -20,6 +20,7 @@ const SkillsSection = ({ state }) => {
                 ariaLabel={item.ariaLabel}
                 img={item.img}
                 subtitle={item.subtitle}
+                href={item.href}
               />
             ))}
           </ul>

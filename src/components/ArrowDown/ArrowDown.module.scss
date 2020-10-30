@@ -2,9 +2,13 @@
 @import "../../scss/config/function";
 @import "../../scss/config/variables";
 
+.arrowDownLink {
+  cursor: pointer;
+}
+
 .arrow {
-  width: rem(40px);
-  height: rem(40px);
+  width: rem(35px);
+  height: rem(35px);
   fill: $blue;
   transition: all .3s;
 

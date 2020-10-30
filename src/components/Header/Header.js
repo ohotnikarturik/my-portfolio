@@ -6,13 +6,13 @@ import style from "./Header.module.scss";
 import Logo from "../Logo";
 import NavBarItem from "../NavBarItem";
 import HamburgerMenu from "../HamburgerMenu";
-import ThemeMode from "../ThemeMode";
+// import ThemeMode from "../ThemeMode";
 
 const Header = ({ state, isFixedHeader }) => {
   return (
     <header className={isFixedHeader ? style.header_fixed : style.header}>
       <div className={`container ${style.container}`}>
-        <div className={style.logo}>
+        <div className={isFixedHeader ? style.logo_notVisible : null}>
           <Logo />
         </div>
         <div className={style.nav}>
@@ -24,7 +24,7 @@ const Header = ({ state, isFixedHeader }) => {
           <HamburgerMenu />
         </div>
         <div className={style.themeMode}>
-          <ThemeMode />
+          {/*<ThemeMode />*/}
         </div>
       </div>
     </header>

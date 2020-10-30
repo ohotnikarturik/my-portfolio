@@ -58,6 +58,7 @@ const HomeSection = ({ state }) => {
                   key={item.id}
                   ariaLabel={item.ariaLabel}
                   img={item.img}
+                  link={item.link}
                 />
               ))}
             </ul>
