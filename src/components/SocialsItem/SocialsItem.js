@@ -5,7 +5,6 @@ import style from "./SocialsItem.module.scss";
 import sprite from "../../assets/img/sprite.svg";
 
 const SocialsItem = ({ ariaLabel, img, link }) => {
-  console.log(link)
   return (
     <li className={style.item}>
       <a href={link} className={style.link} rel="noreferrer" target="_blank" aria-label={ariaLabel}>

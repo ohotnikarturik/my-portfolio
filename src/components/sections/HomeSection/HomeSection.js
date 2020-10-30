@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import imgHome from "../../../assets/img/content/hero-img.svg";
 import sprite from "../../../assets/img/sprite.svg";
@@ -11,7 +12,7 @@ import Header from "../../Header";
 
 const HomeSection = ({ state }) => {
   const [isFixedHeader, setIsFixedHeader] = useState(false);
-  
+
   const scrollHandler = () => {
     if (window.scrollY > 120) {
       setIsFixedHeader(true);
@@ -23,16 +24,13 @@ const HomeSection = ({ state }) => {
   useEffect(() => {
     window.addEventListener("scroll", scrollHandler);
 
-    return () =>
-      window.removeEventListener("scroll", scrollHandler);
+    return () => window.removeEventListener("scroll", scrollHandler);
   }, [isFixedHeader]);
 
   return (
     <section id="Home" className={style.home} title="Home">
       <Header isFixedHeader={isFixedHeader} state={state} />
-      <div
-        className={`container ${style.container}`}
-      >
+      <div className={`container ${style.container}`}>
         <div className={style.desc}>
           <div className={style.descGreeting}>
             <span className={style.descGreetingText}>Hello, I&apos;m</span>
@@ -44,12 +42,18 @@ const HomeSection = ({ state }) => {
             <SectionTitle title={"Full Stack Developer"} />
           </div>
           <div className={style.markContainer}>
-            <h4 className={style.markTitle}>
-              Available for new works
-            </h4>
+            <h4 className={style.markTitle}>Available for new works</h4>
             <svg className={style.markImg}>
               <use href={sprite + "#mark"} />
             </svg>
+          </div>
+          <div className={style.myCvContainer}>
+            <h4 className={style.myCvTitle}>My CV</h4>
+            <Link to="/files/my-cv.pdf" target="_blank" rel="noreferrer">
+              <svg className={style.openFileImg}>
+                <use href={sprite + "#openFile"} />
+              </svg>
+            </Link>
           </div>
           <div className={style.socials}>
             <ul className={style.list}>

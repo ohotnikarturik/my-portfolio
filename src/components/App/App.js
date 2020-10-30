@@ -2,6 +2,7 @@ import React from "react";
 import "normalize.css";
 import PropTypes from "prop-types";
 import "autoprefixer";
+import { BrowserRouter as Router } from "react-router-dom";
 
 // import style from "./App.module.scss";
 import MainPage from "../pages/MainPage";
@@ -10,16 +11,16 @@ import MainPage from "../pages/MainPage";
 
 const App = ({ state }) => {
   return (
-    <>
+    <Router>
       <MainPage state={state} />
       {/*<AllBlogsPage state={state}/>*/}
       {/*<SingleBlogPage state={state}/>*/}
-    </>
+    </Router>
   );
 };
 
 App.propTypes = {
-  state: PropTypes.object.isRequired
+  state: PropTypes.object.isRequired,
 };
 
 export default App;

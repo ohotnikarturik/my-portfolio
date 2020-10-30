@@ -50,7 +50,7 @@
 .markContainer {
   display: flex;
   align-items: center;
-  margin: 0 0 rem(50px) 0;
+  margin-bottom: rem(10px);
 }
 
 .markImg {
@@ -68,6 +68,30 @@
 .desc {
   @include tablets {
     @include flex(column);
+  }
+}
+
+.myCvContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(50px);
+}
+
+.myCvTitle {
+  @include glacial();
+  font-size: rem(18px);
+}
+
+.openFileImg {
+  margin-left: rem(10px);
+  width: rem(20px);
+  height: rem(20px);
+  fill: $blue;
+  transition: all .3s;
+
+  &:hover {
+    fill: darken($blue, 10%);
+    transform: scale(1.1, 1.1);
   }
 }
 
