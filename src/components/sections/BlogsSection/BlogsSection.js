@@ -20,7 +20,7 @@ const BlogsSection = ({ state }) => {
             ))}
           </ul>
           <div className={style.mainButton}>
-            <MainButton label={"All Blogs"} />
+            <MainButton linkTo="blogs" label={"All Blogs"} />
           </div>
         </div>
       </div>

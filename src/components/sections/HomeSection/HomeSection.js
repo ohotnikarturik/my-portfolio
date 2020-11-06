@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
@@ -11,25 +11,9 @@ import ArrowDown from "../../ArrowDown";
 import Header from "../../Header";
 
 const HomeSection = ({ state }) => {
-  const [isFixedHeader, setIsFixedHeader] = useState(false);
-
-  const scrollHandler = () => {
-    if (window.scrollY > 120) {
-      setIsFixedHeader(true);
-    } else {
-      setIsFixedHeader(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
-
-    return () => window.removeEventListener("scroll", scrollHandler);
-  }, [isFixedHeader]);
-
   return (
     <section id="Home" className={style.home} title="Home">
-      <Header isFixedHeader={isFixedHeader} state={state} />
+      <Header state={state} />
       <div className={`container ${style.container}`}>
         <div className={style.desc}>
           <div className={style.descGreeting}>

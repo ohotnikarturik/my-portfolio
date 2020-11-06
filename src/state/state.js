@@ -1,10 +1,17 @@
 const state = {
-  nav: [
+  navHome: [
     { id: 1, name: "Home" },
     { id: 2, name: "Works" },
     { id: 3, name: "Skills" },
     { id: 4, name: "Blogs" },
     { id: 5, name: "Contact" },
+  ],
+  navAllBlogs: [
+    { id: 1, name: "Home" },
+  ],
+  navSingleBlog: [
+    { id: 1, name: "Home" },
+    { id: 2, name: "Blogs" },
   ],
   socials: [
     { id: 1, ariaLabel: "Link to linkedin", img: "in", link: "https://www.linkedin.com/in/artur-okhotnichenko-9104b9190/" },

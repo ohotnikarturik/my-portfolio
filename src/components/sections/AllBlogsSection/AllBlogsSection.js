@@ -26,7 +26,7 @@ const AllBlogsSection = ({ state }) => {
           </div>
           <ul className={style.list}>
             {state.allBlogs.map((item) => (
-              <AllBlogsItem key={item.id} descText={item.descText} />
+              <AllBlogsItem linkTo={item.linkTo} key={item.id} descText={item.descText} />
             ))}
           </ul>
           <div className={style.paginationBottom}>

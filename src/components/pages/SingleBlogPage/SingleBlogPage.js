@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import style from "./SingleBlogPage.module.scss";
 import Header from "../../Header";
 import Footer from "../../Footer";
-import ParallaxSection from "../../sections/ParallaxSection";
 import SingleBlogSection from "../../sections/SingleBlogSection";
 
 const SingleBlogPage = ({ state }) => {
@@ -13,7 +12,6 @@ const SingleBlogPage = ({ state }) => {
       <Header state={state} />
       <main className={style.main}>
         <SingleBlogSection state={state}/>
-        <ParallaxSection />
       </main>
       <Footer state={state} />
     </div>

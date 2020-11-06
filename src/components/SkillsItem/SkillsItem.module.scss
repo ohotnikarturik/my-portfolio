@@ -28,6 +28,7 @@
   border-radius: rem(5px);
   @include flex();
   min-height: rem(150px);
+  box-shadow: 0 0 rem(10px) rem(-3px) $white;
 }
 
 .link {

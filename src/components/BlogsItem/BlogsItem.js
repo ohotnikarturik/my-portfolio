@@ -31,7 +31,7 @@ const BlogsItem = ({ descText }) => {
             <p>{descText}</p>
           </div>
           <div className={style.btn}>
-            <ArrowRight ariaLabel={"Link-button to read my blog"} />
+            <ArrowRight linkTo="blog" ariaLabel={"Link-button to read my blog"} />
           </div>
         </div>
       </div>

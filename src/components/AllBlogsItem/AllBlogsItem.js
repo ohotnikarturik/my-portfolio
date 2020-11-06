@@ -7,7 +7,7 @@ import ArrowRight from "../ArrowRight";
 import Clock from "../Clock";
 import imgBlogsCard from "../../assets/img/content/blogs.svg";
 
-const AllBlogsItem = ({ descText }) => {
+const AllBlogsItem = ({ descText, linkTo }) => {
   return (
     <li className={style.item}>
       <div className={style.itemContainer}>
@@ -31,7 +31,7 @@ const AllBlogsItem = ({ descText }) => {
             <p>{descText}</p>
           </div>
           <div className={style.btn}>
-            <ArrowRight ariaLabel={"Link-button to read my blog"} />
+            <ArrowRight linkTo={linkTo} ariaLabel={"Link-button to read my blog"} />
           </div>
         </div>
       </div>
@@ -41,6 +41,7 @@ const AllBlogsItem = ({ descText }) => {
 
 AllBlogsItem.propTypes = {
   descText: PropTypes.string,
+  linkTo: PropTypes.string,
 };
 
 export default AllBlogsItem;
