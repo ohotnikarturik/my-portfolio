@@ -5,9 +5,9 @@ import style from "./AllBlogsSection.module.scss";
 import PaginationItem from "../../PaginationItem";
 import SectionTitle from "../../SectionTitle";
 import ArrowPagination from "../../ArrowPagination";
-import AllBlogsItem from "../../AllBlogsItem";
+import BlogsItem from "../../BlogItem";
 
-const AllBlogsSection = ({ state }) => {
+const AllBlogsSection = ({ state, page }) => {
   return (
     <section className={style.allBlogs} title="All Blogs">
       <div className={`container ${style.container}`}>
@@ -16,7 +16,6 @@ const AllBlogsSection = ({ state }) => {
         </div>
         <div className={style.content}>
           <div className={style.paginationTop}>
-            <ArrowPagination />
             <ul className={style.paginationList}>
               {state.pagination.map((i) => (
                 <PaginationItem key={i.id} id={i.id} />
@@ -26,11 +25,10 @@ const AllBlogsSection = ({ state }) => {
           </div>
           <ul className={style.list}>
             {state.allBlogs.map((item) => (
-              <AllBlogsItem linkTo={item.linkTo} key={item.id} descText={item.descText} />
+              <BlogsItem page={page} linkTo={item.linkTo} key={item.id} descText={item.descText} />
             ))}
           </ul>
           <div className={style.paginationBottom}>
-            <ArrowPagination />
             <ul className={style.paginationList}>
               {state.pagination.map((i) => (
                 <PaginationItem key={i.id} id={i.id} />
@@ -46,6 +44,7 @@ const AllBlogsSection = ({ state }) => {
 
 AllBlogsSection.propTypes = {
   state: PropTypes.object.isRequired,
+  page: PropTypes.string,
 };
 
 export default AllBlogsSection;

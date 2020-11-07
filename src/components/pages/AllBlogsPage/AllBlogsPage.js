@@ -7,23 +7,22 @@ import Footer from "../../Footer";
 import AllBlogsSection from "../../sections/AllBlogsSection";
 
 const AllBlogsPage = ({ state }) => {
-  const [isNavHide, setIsNavHide] = useState(false);
-  console.log(isNavHide)
-  
+  const [page, setPage] = useState(null);
+
   useEffect(() => {
-      window.scrollTo(0, 0);
-      setIsNavHide(true)
+    window.scrollTo(0, 0);
+    setPage("allBlogs");
     return () => {
       window.scrollTo(0, 0);
-      setIsNavHide(false)
-    }
+      setPage(null);
+    };
   }, []);
-  
+
   return (
     <div className="wrapper">
-      <Header isNavHide={isNavHide} state={state} />
+      <Header page={page} state={state} />
       <main className={style.main}>
-        <AllBlogsSection state={state} />
+        <AllBlogsSection page={page} state={state} />
       </main>
       <Footer state={state} />
     </div>

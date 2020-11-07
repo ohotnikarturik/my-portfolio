@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import style from "./BlogsSection.module.scss";
 import SectionTitle from "../../SectionTitle";
 import MainButton from "../../MainButton";
-import BlogsItem from "../../BlogsItem";
+import BlogItem from "../../BlogItem";
 
 const BlogsSection = ({ state }) => {
   return (
@@ -16,11 +16,11 @@ const BlogsSection = ({ state }) => {
         <div className={style.content}>
           <ul className={style.list}>
             {state.blogs.map((item) => (
-              <BlogsItem key={item.id} descText={item.descText} />
+              <BlogItem linkTo={item.linkTo} key={item.id} descText={item.descText} />
             ))}
           </ul>
           <div className={style.mainButton}>
-            <MainButton linkTo="blogs" label={"All Blogs"} />
+            <MainButton linkTo="/blogs" label={"All Blogs"} />
           </div>
         </div>
       </div>

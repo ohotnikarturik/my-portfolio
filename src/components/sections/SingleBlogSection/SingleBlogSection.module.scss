@@ -37,7 +37,7 @@
   max-width: 100%;
   padding-left: rem(15px);
   padding-right: rem(15px);
-  height: rem(550px);
+  height: rem(430px);
 
   @include phones {
     width: 90%;
@@ -106,7 +106,7 @@
   margin-bottom: rem(60px);
 }
 
-.paginationBottom {
+.paginationContainer {
   @include flex();
 }
 

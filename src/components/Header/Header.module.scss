@@ -57,3 +57,30 @@
     margin-right: rem(40px);
   }
 }
+
+.link {
+  color: $black;
+  font-size: rem(18px);
+  @include glacial();
+  transition: color 250ms ;
+
+  &:after {
+    display: block;
+    content: '';
+    border-bottom: rem(1px) solid $blue;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+
+  &:hover {
+    color: $blue;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+  }
+}
+
+.navItem {
+  margin-left: rem(40px);
+}

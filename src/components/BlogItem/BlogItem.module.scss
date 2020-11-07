@@ -3,6 +3,28 @@
 @import "../../scss/config/variables";
 
 .item {
+  margin-bottom: rem(30px);
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-left: rem(15px);
+  padding-right: rem(15px);
+  cursor: pointer;
+  height: rem(270px);
+
+  @include tablets {
+    margin-bottom: rem(60px);
+    flex: 0;
+    max-width: 100%;
+    width: 80%;
+  }
+
+  @include phones {
+    height: rem(400px);
+    width: 90%;
+  }
+}
+
+.item_wider {
   margin-bottom: rem(60px);
   flex: 0 0 100%;
   max-width: 100%;
@@ -48,7 +70,7 @@
 .imgPic {
   width: 100%;
   height: 100%;
-  //object-fit: cover;
+  object-fit: cover;
 }
 
 .innerContent {
@@ -65,15 +87,12 @@
 .date {
   @include flex();
   margin-bottom: rem(5px);
+  color: $blue;
+  @include glacial(regularItalic)
 }
 
 .datePic {
   margin-right: rem(10px);
-}
-
-.date {
-  color: $blue;
-  @include glacial(regularItalic)
 }
 
 .subtitle {

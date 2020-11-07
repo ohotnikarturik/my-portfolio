@@ -15,7 +15,7 @@ const Routes = ({state}) => {
       <Route path="/blogs" exact>
         <AllBlogsPage state={state} />
       </Route>
-      <Route path="/blog/:id" exact>
+      <Route path="/blog" exact>
         <SingleBlogPage state={state} />
       </Route>
       <Redirect to="/" />

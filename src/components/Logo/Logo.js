@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import style from "./Logo.module.scss";
@@ -7,9 +7,7 @@ import style from "./Logo.module.scss";
 const Logo = ({ label, classModifier, classModifierText }) => {
   return (
     <Link
-      to={"Home"}
-      smooth={true}
-      duration={500}
+      to='/'
       className={classModifier ? style.logo_color_white : style.logo}
     >
       <span className={classModifierText ? style.text_color_red : style.text}>

@@ -1,18 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import style from "./BlogsItem.module.scss";
+import style from "./BlogItem.module.scss";
 import SectionSubtitle from "../SectionSubtitle";
 import ArrowRight from "../ArrowRight";
 import Clock from "../Clock";
-import imgBlogsCard from "../../assets/img/content/blogs.svg";
+import imgBlogCard from "../../assets/img/content/blogs.svg";
 
-const BlogsItem = ({ descText }) => {
+const BlogItem = ({ descText, linkTo, page }) => {
   return (
-    <li className={style.item}>
+    <li className={page === "allBlogs" ? style.item_wider : style.item}>
       <div className={style.itemContainer}>
         <div className={style.img}>
-          <img src={imgBlogsCard} className={style.imgPic} alt="img-blog" />
+          <img src={imgBlogCard} className={style.imgPic} alt="img-blog" />
         </div>
         <div className={style.innerContent}>
           <div className={style.date}>
@@ -31,7 +31,7 @@ const BlogsItem = ({ descText }) => {
             <p>{descText}</p>
           </div>
           <div className={style.btn}>
-            <ArrowRight linkTo="blog" ariaLabel={"Link-button to read my blog"} />
+            <ArrowRight linkTo={linkTo} ariaLabel={"Link-button to read my blog"} />
           </div>
         </div>
       </div>
@@ -39,8 +39,10 @@ const BlogsItem = ({ descText }) => {
   );
 };
 
-BlogsItem.propTypes = {
+BlogItem.propTypes = {
   descText: PropTypes.string,
+  linkTo: PropTypes.string,
+  page: PropTypes.string,
 };
 
-export default BlogsItem;
+export default BlogItem;

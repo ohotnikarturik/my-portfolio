@@ -14,7 +14,6 @@ const SectionSubtitle = ({ subtitle, classModifier }) => (
 );
 
 SectionSubtitle.defaultProps = {
-  subtitle: "Section Subtitle.",
   classModifier: false
   
 };

@@ -46,24 +46,20 @@ const state = {
     { id: 16, img: "cms", subtitle:"Contentful", ariaLabel: "Link-button to view skill", href: "https://www.contentful.com/"},
   ],
   blogs: [
-    { id: 1, subtitle: "Some Blog", descText: "Lorem ipsum dolor sit amet."},
-    { id: 2, subtitle: "Some Blog", descText: "Lorem ipsum dolor sit amet."},
+    { id: 1, subtitle: "Some Blog", descText: "Lorem ipsum dolor sit amet.", linkTo: "/blog"},
+    { id: 2, subtitle: "Some Blog", descText: "Lorem ipsum dolor sit amet.", linkTo: "/blog"},
   ],
   pagination: [
     {id:1},
-    {id:2},
-    {id:3},
-    {id:4},
-    {id:5},
   ],
   allBlogs: [
-    { id: 1, subtitle: "Some Blog", descText: "Lorem ipsum dolor sit amet."},
-    { id: 2, subtitle: "Some Blog", descText: "Lorem ipsum dolor sit amet."},
-    { id: 3, subtitle: "Some Blog", descText: "Lorem ipsum dolor sit amet."},
-    { id: 4, subtitle: "Some Blog", descText: "Lorem ipsum dolor sit amet."},
+    { id: 1, subtitle: "Some Blog", descText: "Lorem ipsum dolor sit amet.", linkTo: "/blog"},
+    { id: 2, subtitle: "Some Blog", descText: "Lorem ipsum dolor sit amet.", linkTo: "/blog"},
+    { id: 3, subtitle: "Some Blog", descText: "Lorem ipsum dolor sit amet.", linkTo: "/blog"},
+    { id: 4, subtitle: "Some Blog", descText: "Lorem ipsum dolor sit amet.", linkTo: "/blog"},
   ],
   blogText: [
-    { id: 1, text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. elit."},
+    { id: 1, text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. elit.", blogTitle: "Some Blog Title"},
     { id: 2, text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. elit."},
     { id: 3, text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. elit."},
 

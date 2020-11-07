@@ -32,8 +32,6 @@
 
 .descContainer {
   @include flex(column, flex-start, flex-start);
-  box-shadow: 0 0 rem(10px) rem(-3px) $black;
-  border-radius: rem(5px);
   height: 100%;
   transition: all .3s;
   width: 100%;

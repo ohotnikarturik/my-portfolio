@@ -7,7 +7,6 @@ import Clock from "../../Clock";
 import SectionSubtitle from "../../SectionSubtitle";
 import singleBlogImg from "../../../assets/img/content/blogs.svg"
 import ArrowPagination from "../../ArrowPagination";
-import PaginationItem from "../../PaginationItem";
 import SingleBlogItem from "../../SingleBlogItem";
 
 const SingleBlogSection = ({ state }) => {
@@ -18,6 +17,10 @@ const SingleBlogSection = ({ state }) => {
           <SectionTitle title={"Blog."} />
         </div>
         <div className={style.content}>
+          <div className={style.paginationContainer}>
+            <ArrowPagination arrowLeft={true} />
+            <ArrowPagination />
+          </div>
           <div className={style.innerContent}>
             <div className={style.date}>
               <div className={style.datePic}>
@@ -42,16 +45,11 @@ const SingleBlogSection = ({ state }) => {
           </ul>
           <div className={style.desc}>
             <ul className={style.descList}>
-              {state.blogText.map(i => <SingleBlogItem key={i.id} text={i.text} />)}
+              {state.blogText.map(i => <SingleBlogItem key={i.id} text={i.text} blogTitle={i.blogTitle} />)}
             </ul>
           </div>
-          <div className={style.paginationBottom}>
-            <ArrowPagination />
-            <ul className={style.paginationList}>
-              {state.pagination.map((i) => (
-                  <PaginationItem key={i.id} id={i.id} />
-              ))}
-            </ul>
+          <div className={style.paginationContainer}>
+            <ArrowPagination arrowLeft={true} />
             <ArrowPagination />
           </div>
         </div>

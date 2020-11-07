@@ -6,12 +6,12 @@ import style from "./Header.module.scss";
 import Logo from "../Logo";
 import NavBarItem from "../NavBarItem";
 import HamburgerMenu from "../HamburgerMenu";
+import { Link } from "react-router-dom";
 // import ThemeMode from "../ThemeMode";
 
-const Header = ({ state}) => {
-  
+const Header = ({ state, page }) => {
   const [isFixedHeader, setIsFixedHeader] = useState(false);
-  
+
   const scrollHandler = () => {
     if (window.scrollY > 120) {
       setIsFixedHeader(true);
@@ -19,13 +19,45 @@ const Header = ({ state}) => {
       setIsFixedHeader(false);
     }
   };
-  
+
+  const setNavigation = (navPage) => {
+    switch (navPage) {
+      case "allBlogs":
+        return (
+          <li>
+            <Link to="/" className={style.link}>
+              Home
+            </Link>
+          </li>
+        );
+      case "singleBlog":
+        return (
+          <>
+            <li className={style.navItem}>
+              <Link to="/" className={style.link}>
+                Home
+              </Link>
+            </li>
+            <li className={style.navItem}>
+              <Link to="/blogs" className={style.link}>
+                All Blogs
+              </Link>
+            </li>
+          </>
+        );
+      default:
+        return state.navHome.map((item) => (
+          <NavBarItem key={item.id} name={item.name} />
+        ));
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("scroll", scrollHandler);
-    
+
     return () => window.removeEventListener("scroll", scrollHandler);
   }, [isFixedHeader]);
-  
+
   return (
     <header className={isFixedHeader ? style.header_fixed : style.header}>
       <div className={`container ${style.container}`}>
@@ -33,16 +65,10 @@ const Header = ({ state}) => {
           <Logo />
         </div>
         <div className={style.nav}>
-          <ul className={style.list}>
-            {state.navHome.map((item) => (
-              <NavBarItem key={item.id} name={item.name} />
-            ))}
-          </ul>
+          <ul className={style.list}>{setNavigation(page)}</ul>
           <HamburgerMenu />
         </div>
-        <div className={style.themeMode}>
-          {/*<ThemeMode />*/}
-        </div>
+        <div className={style.themeMode}>{/*<ThemeMode />*/}</div>
       </div>
     </header>
   );
@@ -50,7 +76,8 @@ const Header = ({ state}) => {
 
 Header.propTypes = {
   state: PropTypes.object.isRequired,
-  isFixedHeader: PropTypes.bool
+  isFixedHeader: PropTypes.bool,
+  page: PropTypes.string,
 };
 
 export default Header;
