@@ -1,0 +1,10 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.polygon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}

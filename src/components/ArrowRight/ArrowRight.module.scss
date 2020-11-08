@@ -9,7 +9,7 @@
   transition: all .3s;
 
   &:hover {
-    fill: darken($blue, 10%);
+    fill: lighten($blue, 10%);
   }
 
   &_size-direction_small-right {

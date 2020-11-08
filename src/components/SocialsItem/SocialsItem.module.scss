@@ -17,7 +17,7 @@
   transition: all .3s;
 
   &:hover {
-    fill: darken($blue, 10%);
+    fill: lighten($blue, 10%);
     transform: scale(1.1, 1.1);
   }
 

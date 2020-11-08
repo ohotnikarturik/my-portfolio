@@ -10,10 +10,10 @@
   transition: all .3s;
 
   &:hover {
-    background-color: darken($blue, 10%);
+    background-color: lighten($blue, 10%);
   }
 
   &_active {
-    @include circle(rem(30px), darken($blue, 30%));
+    @include circle(rem(30px), lighten($blue, 30%));
   }
 }

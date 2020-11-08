@@ -1,0 +1,11 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.wave {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin-top: rem(-5px);
+}

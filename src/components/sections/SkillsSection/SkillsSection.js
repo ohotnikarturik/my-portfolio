@@ -4,10 +4,12 @@ import PropTypes from "prop-types";
 import style from "./SkillsSection.module.scss";
 import SectionTitle from "../../SectionTitle";
 import SkillsItem from "../../SkillsItem";
+import TriangleShape from "../../TriangleShape";
 
 const SkillsSection = ({ state }) => {
   return (
     <section id="Skills" className={`section ${style.skills}`} title="Skills">
+      <TriangleShape color="#e2e2e2" />
       <div className={`container ${style.container}`}>
         <div className={style.title}>
           <SectionTitle title={"My Skills."} classModifier />

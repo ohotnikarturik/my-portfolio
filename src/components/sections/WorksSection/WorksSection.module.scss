@@ -4,6 +4,7 @@
 
 .works {
   background-color: $light-gray;
+  position: relative;
   @include tablets {
     height: 100%;
     min-height: 100vh;

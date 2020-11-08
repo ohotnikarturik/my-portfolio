@@ -84,13 +84,13 @@
 
 .openFileImg {
   margin-left: rem(10px);
-  width: rem(20px);
-  height: rem(20px);
+  width: rem(22px);
+  height: rem(25px);
   fill: $blue;
   transition: all .3s;
 
   &:hover {
-    fill: darken($blue, 10%);
+    fill: lighten($blue, 10%);
     transform: scale(1.1, 1.1);
   }
 }

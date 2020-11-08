@@ -9,7 +9,7 @@
   transition: all .3s;
 
   &:hover {
-    background-color: darken($blue, 10%);
+    background-color: lighten($blue, 10%);
   }
 }
 .arrowRightPagination {
