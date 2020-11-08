@@ -3,8 +3,8 @@ import React from "react";
 
 import style from "./ContactsSection.module.scss";
 import SectionTitle from "../../SectionTitle";
-import MainButton from "../../MainButton";
 import WaveShape from "../../WaveShape";
+import SendEmail from "../../SendEmail";
 
 const ContactsSection = () => {
   return (
@@ -15,35 +15,7 @@ const ContactsSection = () => {
           <SectionTitle title={"Contact."} />
         </div>
         <div className={style.content}>
-          <form className={style.form}>
-            <label className={style.label}>
-              <input
-                aria-label="input-1"
-                className={style.input}
-                type="text"
-                placeholder="Name..."
-              />
-            </label>
-            <label className={style.label}>
-              <input
-                aria-label="input-2"
-                className={style.input}
-                type="text"
-                placeholder="Email..."
-              />
-            </label>
-            <label className={style.label}>
-              <textarea
-                aria-label="textarea"
-                className={style.textarea}
-                placeholder="Type message..."
-              />
-            </label>
-            <div className={style.mainButton}>
-             <MainButton label={"Reset"}  type={"reset"} classModifier/>
-             <MainButton label={"Send Message"} />
-            </div>
-          </form>
+          <SendEmail />
         </div>
       </div>
     </section>
