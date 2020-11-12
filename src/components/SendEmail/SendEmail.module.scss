@@ -9,9 +9,28 @@
 }
 
 .label {
-  width: 100%;
-  @include flex();
+  min-height: rem(60px);
+  width: 40%;
+  @include flex(column, flex-end);
   margin-bottom: rem(20px);
+
+  @include tablets {
+    width: 60%;
+  }
+
+  @include phones {
+    width: 90%;
+  }
+}
+
+.errorTextContainer {
+  display: flex;
+  width: 100%;
+}
+
+.errorText {
+  font-size: rem(14px);
+  color: $red;
 }
 
 .input {
@@ -21,19 +40,25 @@
   transition: all .3s;
   @include placeColor($blue);
   border-radius: rem(5px);
-  width: 40%;
+  width: 100%;
 
   &:focus {
     border: rem(1px) solid $blue;
   }
+}
 
-  @include tablets {
-    width: 60%;
+.inputError {
+  @extend .input;
+  @include placeColor($red);
+  border: rem(1px) solid $red;
+  &:focus {
+    border: rem(1px) solid $red;
   }
+}
 
-  @include phones {
-    width: 90%;
-  }
+.labelTextarea {
+  @extend .label;
+  min-height: rem(170px);
 }
 
 .textarea {
@@ -45,19 +70,19 @@
   border: rem(1px) solid $white;
   @include placeColor($blue);
   border-radius: rem(5px);
-  width: 40%;
-  margin: rem(30px) 0;
-
+  width: 100%;
   &:focus {
     border: rem(1px) solid $blue;
   }
+}
 
-  @include tablets {
-    width: 60%;
-  }
+.textareaError {
+  @extend .textarea;
+  @include placeColor($red);
+  border: rem(1px) solid $red;
 
-  @include phones {
-    width: 90%;
+  &:focus {
+    border: rem(1px) solid $red;
   }
 }
 
@@ -72,6 +97,6 @@
   @include phones {
     width: 90%;
     @include flex(column);
-    margin-bottom: rem(80px);
+    margin-bottom: rem(40px);
   }
 }
