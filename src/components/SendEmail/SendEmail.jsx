@@ -2,6 +2,7 @@ import React from "react";
 import emailjs from "emailjs-com";
 import { Formik } from "formik";
 import { object, string } from "yup";
+import { useAlert } from "react-alert";
 
 const SERVICE_ID = process.env.REACT_APP_MY_SERVICE_ID;
 const TEMPLATE_ID = process.env.REACT_APP_MY_TEMPLATE_ID;
@@ -10,25 +11,23 @@ import style from "./SendEmail.module.scss";
 import MainButton from "../MainButton";
 
 export default function SendEmail() {
-  function sendEmail(e) {
-    e.preventDefault();
-    console.log("hi");
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
-      (result) => {
-        console.log(result.text);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
-    e.target.reset();
-  }
-
+  const alert = useAlert();
   const initialValues = {
     name: "",
     email: "",
     subject: "",
     message: "",
+  };
+  
+  const sendEmail = (values) => {
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, values, USER_ID).then(
+      () => {
+        alert.success("Message was send!");
+      },
+      (error) => {
+        alert.error(`${error.text}. Try again!`);
+      }
+    );
   };
 
   const validationSchema = object().shape({
@@ -49,10 +48,9 @@ export default function SendEmail() {
       .required("Please, provide your message!"),
   });
 
-  const onSubmit = (values) => {
-    const { name, email, subject, message } = values;
-    console.log(name, email, subject, message);
-    sendEmail();
+  const onSubmit = (values, submitProps) => {
+    sendEmail(values);
+    submitProps.resetForm();
   };
 
   return (
@@ -60,18 +58,18 @@ export default function SendEmail() {
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
-      enableReinitialize
     >
       {({
         values,
+        handleSubmit,
         errors,
-        isValid,
         handleChange,
         handleBlur,
         touched,
         handleReset,
+        dirty,
       }) => (
-        <form onSubmit={sendEmail} className={style.form}>
+        <form onSubmit={handleSubmit} className={style.form}>
           <label className={style.label}>
             <div className={style.errorTextContainer}>
               {errors.name && touched.name && (
@@ -155,13 +153,12 @@ export default function SendEmail() {
             <MainButton
               label={"Reset"}
               type={"reset"}
-              isDisabled={isValid}
+              isDisabled={!dirty}
               onReset={handleReset}
             />
             <MainButton
               label={"Send Message"}
               type={"submit"}
-              isDisabled={isValid}
             />
           </div>
         </form>

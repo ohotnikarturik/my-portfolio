@@ -9,14 +9,14 @@ const MainButton = ({ label, type, linkTo, isDisabled, onReset }) => {
     <button
       className={
         type === "reset"
-          ? (!isDisabled
+          ? (isDisabled
             ? style.mainButton_reset_disabled
             : style.mainButton_reset)
-          : (!isDisabled ? style.mainButton_disabled : style.mainButton)
+          : style.mainButton
       }
       role="button"
       type={type}
-      disabled={!isDisabled}
+      disabled={isDisabled}
       onClick={onReset}
     >
       {label}
