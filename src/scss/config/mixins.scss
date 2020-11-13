@@ -83,22 +83,22 @@
 @mixin placeColor($color: #000000) {
   &::-webkit-input-placeholder {
     color: $color;
-    opacity: .7;
+    opacity: .5;
     @include glacial(regularItalic);
   }
   &:-moz-placeholder {
     color: $color;
-    opacity: .7;
+    opacity: .5;
     @include glacial(regularItalic);
   }
   &::-moz-placeholder {
     color: $color;
-    opacity: .7;
+    opacity: .5;
     @include glacial(regularItalic);
   }
   &:-ms-input-placeholder {
     color: $color;
-    opacity: .7;
+    opacity: .5;
     @include glacial(regularItalic);
   }
 }

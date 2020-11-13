@@ -8,20 +8,20 @@ import SectionSubtitle from "../SectionSubtitle";
 const SkillsItem = ({ ariaLabel, img, subtitle, href }) => {
   return (
     <li className={style.item}>
-      <div className={style.innerBlock}>
-        <a
-          href={href}
-          className={style.link}
-          rel="noreferrer"
-          target="_blank"
-          aria-label={ariaLabel}
-        >
+      <a
+        href={href}
+        className={style.link}
+        rel="noreferrer"
+        target="_blank"
+        aria-label={ariaLabel}
+      >
+        <div className={style.innerBlock}>
           <svg className={style.img}>
             <use href={`${sprite}#${img}`} />
           </svg>
           <SectionSubtitle subtitle={subtitle} classModifier />
-        </a>
-      </div>
+        </div>
+      </a>
     </li>
   );
 };

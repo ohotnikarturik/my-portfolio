@@ -1154,7 +1154,7 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@farbenmeer/react-spring-slider@^1.3.2":
+"@farbenmeer/react-spring-slider@^1.3.3":
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/@farbenmeer/react-spring-slider/-/react-spring-slider-1.3.3.tgz#02727e3c6faa9e90013f68bef31a0be145178a87"
   integrity sha512-rBMLowBm5payZfPnLB5fPq7sC9nWGf9fVfNg9RHncAtBG8gpzbgXs6OVbgSO2JPyN8Xf6Ywvf6QbgICnyzVVgw==

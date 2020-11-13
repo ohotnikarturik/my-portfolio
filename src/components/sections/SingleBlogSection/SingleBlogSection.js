@@ -1,13 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Spring } from "react-spring/renderprops";
 
 import style from "./SingleBlogSection.module.scss";
 import SectionTitle from "../../SectionTitle";
 import Clock from "../../Clock";
 import SectionSubtitle from "../../SectionSubtitle";
-import singleBlogImg from "../../../assets/img/content/blogs.svg"
+import singleBlogImg from "../../../assets/img/content/blogs.svg";
 import ArrowPagination from "../../ArrowPagination";
 import SingleBlogItem from "../../SingleBlogItem";
+import VisibilitySensor from "../../VisibilitySensor/VisibilitySensor";
 
 const SingleBlogSection = ({ state }) => {
   return (
@@ -16,43 +18,65 @@ const SingleBlogSection = ({ state }) => {
         <div className={style.title}>
           <SectionTitle title={"Blog."} />
         </div>
-        <div className={style.content}>
-          <div className={style.paginationContainer}>
-            <ArrowPagination arrowLeft={true} />
-            <ArrowPagination />
-          </div>
-          <div className={style.innerContent}>
-            <div className={style.date}>
-              <div className={style.datePic}>
-                <Clock />
-              </div>
-              <div className={style.dateTitle}>
-                <div className={style.date}>May 09, 2020</div>
-              </div>
-            </div>
-            <div className={style.subtitle}>
-              <SectionSubtitle subtitle={"Some Blog"} />
-            </div>
-          </div>
-          <ul className={style.list}>
-            <li className={style.item}>
-              <div className={style.itemContainer}>
-                <div className={style.img}>
-                  <img src={singleBlogImg} className={style.imgPic} alt="img-blog" />
+        <VisibilitySensor partialVisibility once>
+          {({ isVisible }) => (
+            <Spring
+              to={{
+                opacity: isVisible ? 1 : 0,
+              }}
+            >
+              {(props) => (
+                <div style={props} className={style.content}>
+                  <div className={style.paginationContainer}>
+                    <ArrowPagination arrowLeft={true} />
+                    <ArrowPagination />
+                  </div>
+                  <div className={style.innerContent}>
+                    <div className={style.date}>
+                      <div className={style.datePic}>
+                        <Clock />
+                      </div>
+                      <div className={style.dateTitle}>
+                        <div className={style.date}>May 09, 2020</div>
+                      </div>
+                    </div>
+                    <div className={style.subtitle}>
+                      <SectionSubtitle subtitle={"Some Blog"} />
+                    </div>
+                  </div>
+                  <ul className={style.list}>
+                    <li className={style.item}>
+                      <div className={style.itemContainer}>
+                        <div className={style.img}>
+                          <img
+                            src={singleBlogImg}
+                            className={style.imgPic}
+                            alt="img-blog"
+                          />
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div className={style.desc}>
+                    <ul className={style.descList}>
+                      {state.blogText.map((i) => (
+                        <SingleBlogItem
+                          key={i.id}
+                          text={i.text}
+                          blogTitle={i.blogTitle}
+                        />
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={style.paginationContainer}>
+                    <ArrowPagination arrowLeft={true} />
+                    <ArrowPagination />
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
-          <div className={style.desc}>
-            <ul className={style.descList}>
-              {state.blogText.map(i => <SingleBlogItem key={i.id} text={i.text} blogTitle={i.blogTitle} />)}
-            </ul>
-          </div>
-          <div className={style.paginationContainer}>
-            <ArrowPagination arrowLeft={true} />
-            <ArrowPagination />
-          </div>
-        </div>
+              )}
+            </Spring>
+          )}
+        </VisibilitySensor>
       </div>
     </section>
   );

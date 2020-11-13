@@ -3,7 +3,7 @@
 @import "../../../scss/config/variables";
 
 .contacts {
-  background-color: $light-gray;
+  background-color: $white;
   position: relative;
 }
 
@@ -12,10 +12,34 @@
 }
 
 .content {
-  @include flex(column);
+  @include flex();
   height: 100%;
+  width: 100%;
   //margin-right: rem(-15px);
   //margin-left: rem(-15px);
 }
+.contentImageContainer {
+  width: 50%;
+  @include flex();
+
+  @include tablets() {
+    display: none;
+  }
+}
+
+.contentImage {
+  width: rem(400px);
+  height: rem(400px);
+}
+
+.formContainer {
+  width: 50%;
+
+  @include tablets {
+    width: 100%;
+  }
+}
+
+
 
 

@@ -13,8 +13,7 @@
   min-height: rem(150px);
 
   &:hover {
-    fill: darken($white, 10%);
-    transform: scale(1.1, 1.1);
+    transform: scale(1.03, 1.03);
   }
 
   @include tablets {
@@ -23,15 +22,20 @@
   }
 }
 
-.innerBlock {
-  border: rem(2px) solid $white;
+.link {
   border-radius: rem(5px);
   @include flex();
   min-height: rem(150px);
-  box-shadow: 0 0 rem(10px) rem(-3px) $white;
+  transition: all .3s;
+  background-color: $blue;
+
+  &:hover {
+    box-shadow: rem(0px) rem(34px) rem(47px) rem(-21px) $black;
+    //0rem 2.125rem 2.9375rem -1.3125rem
+  }
 }
 
-.link {
+.innerBlock {
   @include flex(column, space-around);
 }
 

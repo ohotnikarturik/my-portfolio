@@ -2,6 +2,21 @@
 @import "../../scss/config/function";
 @import "../../scss/config/variables";
 
+.messageImageContainer {
+  margin-bottom: rem(100px);
+  @include flex(column);
+}
+
+.messageImg {
+  margin-bottom: rem(10px);
+  width: rem(100px);
+}
+
+.messageText {
+  text-align: center;
+  margin-top: rem(10px);
+}
+
 .form {
   @include flex(column);
   height: 100%;
@@ -11,7 +26,7 @@
 
 .label {
   min-height: rem(60px);
-  width: 40%;
+  width: 80%;
   @include flex(column, flex-end);
   margin-bottom: rem(20px);
 
@@ -37,14 +52,14 @@
 .input {
   padding: rem(10px);
   outline: none;
-  border: rem(1px) solid $white;
   transition: all .3s;
   @include placeColor($blue);
   border-radius: rem(5px);
   width: 100%;
+  border: rem(1px) solid $blue;
 
   &:focus {
-    border: rem(1px) solid $blue;
+    box-shadow: 0 0 rem(10px) rem(-3px) $blue;
   }
 }
 
@@ -53,7 +68,7 @@
   @include placeColor($red);
   border: rem(1px) solid $red;
   &:focus {
-    border: rem(1px) solid $red;
+    box-shadow: 0 0 rem(10px) rem(-3px) $red;
   }
 }
 
@@ -68,12 +83,12 @@
   resize: none;
   height: rem(150px);
   transition: all .3s;
-  border: rem(1px) solid $white;
+  border: rem(1px) solid $blue;
   @include placeColor($blue);
   border-radius: rem(5px);
   width: 100%;
   &:focus {
-    border: rem(1px) solid $blue;
+    box-shadow: 0 0 rem(10px) rem(-3px) $blue;
   }
 }
 
@@ -83,12 +98,12 @@
   border: rem(1px) solid $red;
 
   &:focus {
-    border: rem(1px) solid $red;
+    box-shadow: 0 0 rem(10px) rem(-3px) $red;
   }
 }
 
-.mainButton {
-  width: 40%;
+.buttonsContainer {
+  width: 80%;
   @include flex($justify: space-between);
 
   @include tablets {

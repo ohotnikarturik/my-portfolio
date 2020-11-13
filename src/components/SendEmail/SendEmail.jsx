@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { Formik } from "formik";
 import { object, string } from "yup";
@@ -9,8 +9,13 @@ const TEMPLATE_ID = process.env.REACT_APP_MY_TEMPLATE_ID;
 const USER_ID = process.env.REACT_APP_MY_USER_ID;
 import style from "./SendEmail.module.scss";
 import MainButton from "../MainButton";
+import sprite from "../../assets/img/sprite.svg";
+import SectionSubtitle from "../SectionSubtitle";
+import { Spring } from "react-spring/renderprops";
+import VisibilitySensor from "../VisibilitySensor/VisibilitySensor";
 
 export default function SendEmail() {
+  const [showImage, setShowImage] = useState(false);
   const alert = useAlert();
   const initialValues = {
     name: "",
@@ -18,11 +23,18 @@ export default function SendEmail() {
     subject: "",
     message: "",
   };
-  
+
+  const showImageHandler = () => {
+    setShowImage(true);
+    setTimeout(() => {
+      setShowImage(false);
+    }, 5000);
+  };
+
   const sendEmail = (values) => {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, values, USER_ID).then(
       () => {
-        alert.success("Message was send!");
+        showImageHandler();
       },
       (error) => {
         alert.error(`${error.text}. Try again!`);
@@ -53,7 +65,28 @@ export default function SendEmail() {
     submitProps.resetForm();
   };
 
-  return (
+  return showImage ? (
+    <VisibilitySensor partialVisibility once>
+      {({ isVisible }) => (
+        <Spring
+          to={{
+            opacity: isVisible ? 1 : 0,
+          }}
+        >
+          {(props) => (
+            <div style={props} className={style.messageImageContainer}>
+              <svg className={style.messageImg}>
+                <use href={`${sprite}#envelope`} />
+              </svg>
+              <SectionSubtitle subtitle="Message was send!" />
+              <div className={style.messageText}>I will contact you soon!</div>
+              <div className={style.messageText}>Thank you.</div>
+            </div>
+          )}
+        </Spring>
+      )}
+    </VisibilitySensor>
+  ) : (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}
@@ -149,17 +182,14 @@ export default function SendEmail() {
               onBlur={handleBlur("message")}
             />
           </label>
-          <div className={style.mainButton}>
+          <div className={style.buttonsContainer}>
             <MainButton
               label={"Reset"}
               type={"reset"}
               isDisabled={!dirty}
               onReset={handleReset}
             />
-            <MainButton
-              label={"Send Message"}
-              type={"submit"}
-            />
+            <MainButton label={"Send Message"} type={"submit"} />
           </div>
         </form>
       )}
