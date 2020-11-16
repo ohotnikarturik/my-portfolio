@@ -13,11 +13,12 @@ const Footer = ({ state }) => {
         <div className={style.socials}>
           <ul className={style.list}>
             {state.socials.map((item) => (
-                <SocialsItem
-                    key={item.id}
-                    ariaLabel={item.ariaLabel}
-                    img={item.img}
-                />
+              <SocialsItem
+                key={item.id}
+                ariaLabel={item.ariaLabel}
+                img={item.img}
+                link={item.link}
+              />
             ))}
           </ul>
         </div>

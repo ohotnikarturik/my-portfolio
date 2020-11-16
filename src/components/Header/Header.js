@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 import "../../scss/index.scss";
 import style from "./Header.module.scss";
 import Logo from "../Logo";
 import NavBarItem from "../NavBarItem";
 import HamburgerMenu from "../HamburgerMenu";
-import { Link } from "react-router-dom";
 import Progress from "../Progress";
 import OverlayNav from "../OverlayNav";
 // import ThemeMode from "../ThemeMode";
@@ -70,14 +70,14 @@ const Header = ({ state, page }) => {
   };
 
   if (isShowOverlay) {
-    return <OverlayNav state={state} onClick={hideOverlayNav} />;
+    return <OverlayNav page={page} state={state} onClick={hideOverlayNav} />;
   }
 
   return (
     <header className={isFixedHeader ? style.header_fixed : style.header}>
       <Progress />
       <div className={`container ${style.container}`}>
-        <div className={isFixedHeader ? style.logo_notVisible : null}>
+        <div className={style.logo}>
           <Logo />
         </div>
         <div className={style.nav}>

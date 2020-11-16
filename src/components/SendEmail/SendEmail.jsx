@@ -18,6 +18,7 @@ import Spinner from "../Spinner";
 export default function SendEmail() {
   const [showSentImage, setShowSentImage] = useState(false);
   const [showSpinner, setShowSpinner] = useState(false);
+  const [guestName, setGuestName] = useState("");
   const alert = useAlert();
   const initialValues = {
     name: "",
@@ -26,10 +27,12 @@ export default function SendEmail() {
     message: "",
   };
 
-  const showImageHandler = () => {
+  const showImageHandler = (name) => {
+    setGuestName(name);
     setShowSentImage(true);
     setTimeout(() => {
       setShowSentImage(false);
+      setGuestName("");
     }, 5000);
   };
 
@@ -37,7 +40,7 @@ export default function SendEmail() {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, values, USER_ID).then(
       () => {
         setShowSpinner(false);
-        showImageHandler();
+        showImageHandler(values.name);
       },
       (error) => {
         alert.error(`${error.text}. Try again!`);
@@ -89,7 +92,7 @@ export default function SendEmail() {
                 </svg>
                 <SectionSubtitle subtitle="Message was send!" />
                 <div className={style.messageText}>
-                  I will contact you soon!
+                  {`I will contact you ${guestName} soon!`}
                 </div>
                 <div className={style.messageText}>Thank you.</div>
               </div>

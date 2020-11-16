@@ -71,7 +71,6 @@ const HomeSection = ({ state }) => {
                     </ul>
                   </div>
                 </div>
-
                 <div className={style.img}>
                   <img className={style.imgPic} src={imgHome} alt="developer" />
                 </div>
