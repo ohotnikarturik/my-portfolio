@@ -10,7 +10,7 @@ import SectionTitle from "../../SectionTitle";
 import SocialsItem from "../../SocialsItem";
 import ArrowDown from "../../ArrowDown";
 import Header from "../../Header";
-import VisibilitySensor from "../../VisibilitySensor/VisibilitySensor";
+import VisibilitySensor from "../../VisibilitySensor";
 
 const HomeSection = ({ state }) => {
   return (
@@ -25,7 +25,7 @@ const HomeSection = ({ state }) => {
           >
             {(props) => (
               <div style={props} className={`container ${style.container}`}>
-                <div className={style.desc}>
+                <div className={style.descContainer}>
                   <div className={style.descGreeting}>
                     <span className={style.descGreetingText}>
                       Hello, I&apos;m
@@ -36,6 +36,9 @@ const HomeSection = ({ state }) => {
                   </div>
                   <div className={style.profession}>
                     <SectionTitle title={"Full Stack Developer"} />
+                  </div>
+                  <div className={style.desc}>
+                    <h4 className={style.descTitle}>I can build web and mobile applications</h4>
                   </div>
                   <div className={style.markContainer}>
                     <h4 className={style.markTitle}>Available for new works</h4>
@@ -51,7 +54,7 @@ const HomeSection = ({ state }) => {
                       rel="noreferrer"
                     >
                       <svg className={style.openFileImg}>
-                        <use href={sprite + "#openFile"} />
+                        <use href={sprite + "#openPage"} />
                       </svg>
                     </Link>
                   </div>

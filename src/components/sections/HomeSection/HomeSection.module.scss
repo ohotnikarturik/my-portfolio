@@ -47,6 +47,15 @@
   margin-bottom: rem(10px);
 }
 
+.desc {
+  margin-bottom: rem(10px);
+}
+
+.descTitle {
+  @include glacial();
+  font-size: rem(18px);
+}
+
 .markContainer {
   display: flex;
   align-items: center;
@@ -65,7 +74,7 @@
   font-size: rem(18px);
 }
 
-.desc {
+.descContainer {
   @include tablets {
     @include flex(column);
   }
@@ -99,7 +108,7 @@
   display: flex;
 }
 
-.desc, .img {
+.descContainer, .img {
   width: 50%;
 
   @include tablets {

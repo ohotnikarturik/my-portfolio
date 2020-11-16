@@ -6,7 +6,7 @@ import style from "./ContactsSection.module.scss";
 import SectionTitle from "../../SectionTitle";
 import WaveShape from "../../WaveShape";
 import SendEmail from "../../SendEmail";
-import VisibilitySensor from "../../VisibilitySensor/VisibilitySensor";
+import VisibilitySensor from "../../VisibilitySensor";
 import sprite from "../../../assets/img/sprite.svg";
 
 const ContactsSection = () => {
@@ -24,7 +24,7 @@ const ContactsSection = () => {
         <VisibilitySensor partialVisibility once offset={{ bottom: -400 }}>
           {({ isVisible }) => (
             <Spring
-              delay={400}
+              delay={300}
               to={{
                 opacity: isVisible ? 1 : 0,
                 transform: isVisible ? "translateY(0)" : "translateY(400px)",

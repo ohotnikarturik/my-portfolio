@@ -9,7 +9,7 @@ import SectionSubtitle from "../../SectionSubtitle";
 import singleBlogImg from "../../../assets/img/content/blogs.svg";
 import ArrowPagination from "../../ArrowPagination";
 import SingleBlogItem from "../../SingleBlogItem";
-import VisibilitySensor from "../../VisibilitySensor/VisibilitySensor";
+import VisibilitySensor from "../../VisibilitySensor";
 
 const SingleBlogSection = ({ state }) => {
   return (

@@ -34,6 +34,7 @@
 
 .formContainer {
   width: 50%;
+  @include flex();
 
   @include tablets {
     width: 100%;

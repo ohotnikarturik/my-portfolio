@@ -12,10 +12,12 @@ import MainButton from "../MainButton";
 import sprite from "../../assets/img/sprite.svg";
 import SectionSubtitle from "../SectionSubtitle";
 import { Spring } from "react-spring/renderprops";
-import VisibilitySensor from "../VisibilitySensor/VisibilitySensor";
+import VisibilitySensor from "../VisibilitySensor";
+import Spinner from "../Spinner";
 
 export default function SendEmail() {
-  const [showImage, setShowImage] = useState(false);
+  const [showSentImage, setShowSentImage] = useState(false);
+  const [showSpinner, setShowSpinner] = useState(false);
   const alert = useAlert();
   const initialValues = {
     name: "",
@@ -25,15 +27,16 @@ export default function SendEmail() {
   };
 
   const showImageHandler = () => {
-    setShowImage(true);
+    setShowSentImage(true);
     setTimeout(() => {
-      setShowImage(false);
+      setShowSentImage(false);
     }, 5000);
   };
 
   const sendEmail = (values) => {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, values, USER_ID).then(
       () => {
+        setShowSpinner(false);
         showImageHandler();
       },
       (error) => {
@@ -61,32 +64,43 @@ export default function SendEmail() {
   });
 
   const onSubmit = (values, submitProps) => {
+    setShowSpinner(true);
     sendEmail(values);
     submitProps.resetForm();
   };
 
-  return showImage ? (
-    <VisibilitySensor partialVisibility once>
-      {({ isVisible }) => (
-        <Spring
-          to={{
-            opacity: isVisible ? 1 : 0,
-          }}
-        >
-          {(props) => (
-            <div style={props} className={style.messageImageContainer}>
-              <svg className={style.messageImg}>
-                <use href={`${sprite}#envelope`} />
-              </svg>
-              <SectionSubtitle subtitle="Message was send!" />
-              <div className={style.messageText}>I will contact you soon!</div>
-              <div className={style.messageText}>Thank you.</div>
-            </div>
-          )}
-        </Spring>
-      )}
-    </VisibilitySensor>
-  ) : (
+  if (showSpinner) {
+    return <Spinner />;
+  }
+
+  if (showSentImage) {
+    return (
+      <VisibilitySensor partialVisibility once>
+        {({ isVisible }) => (
+          <Spring
+            to={{
+              opacity: isVisible ? 1 : 0,
+            }}
+          >
+            {(props) => (
+              <div style={props} className={style.messageImageContainer}>
+                <svg className={style.messageImg}>
+                  <use href={`${sprite}#envelope`} />
+                </svg>
+                <SectionSubtitle subtitle="Message was send!" />
+                <div className={style.messageText}>
+                  I will contact you soon!
+                </div>
+                <div className={style.messageText}>Thank you.</div>
+              </div>
+            )}
+          </Spring>
+        )}
+      </VisibilitySensor>
+    );
+  }
+
+  return (
     <Formik
       initialValues={initialValues}
       validationSchema={validationSchema}

@@ -5,10 +5,6 @@
 .works {
   background-color: $light-gray;
   position: relative;
-  @include tablets {
-    height: 100%;
-    min-height: 100vh;
-  }
 }
 
 .container {
@@ -16,16 +12,16 @@
 }
 
 .title {
-  @include tablets {
-    margin-bottom: 60px;
-  }
+  margin-bottom: 60px;
 }
 
 .content {
   @include flex(column);
-  height: 100%;
-  margin-right: rem(-15px);
-  margin-left: rem(-15px);
+  box-shadow: 0 0 rem(10px) rem(-3px) $black;
+  height: 70%;
+  @include tablets {
+    height: 60%;
+  }
 }
 
 .list {

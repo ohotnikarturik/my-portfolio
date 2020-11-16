@@ -8,6 +8,7 @@ import AlertTemplate from "react-alert-template-basic";
 
 import Routes from "../Routes";
 import Spinner from "../Spinner";
+import style from "./App.module.scss"
 
 const options = {
   offset: "100px",
@@ -16,15 +17,15 @@ const options = {
 };
 
 const App = ({ state }) => {
-  const [appLoading, setAppLoading] = useState(true);
+  const [isSpinner, setIsSpinner] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setAppLoading(false);
+      setIsSpinner(false);
     }, 0);
   }, []);
 
-  if (appLoading) return <Spinner />;
+  if (isSpinner) return <div className={style.spinnerContainer}><Spinner /></div> ;
 
   return (
     <Provider template={AlertTemplate} {...options}>

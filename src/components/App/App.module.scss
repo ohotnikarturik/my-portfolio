@@ -1,3 +1,10 @@
 @import "../../scss/config/mixins";
 @import "../../scss/config/function";
 @import "../../scss/config/variables";
+
+.spinnerContainer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

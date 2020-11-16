@@ -6,7 +6,7 @@ import style from "./SkillsSection.module.scss";
 import SectionTitle from "../../SectionTitle";
 import SkillsItem from "../../SkillsItem";
 import TriangleShape from "../../TriangleShape";
-import VisibilitySensor from "../../VisibilitySensor/VisibilitySensor";
+import VisibilitySensor from "../../VisibilitySensor";
 
 const SkillsSection = ({ state }) => {
   return (

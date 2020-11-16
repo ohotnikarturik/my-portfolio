@@ -7,7 +7,7 @@ import PaginationItem from "../../PaginationItem";
 import SectionTitle from "../../SectionTitle";
 import ArrowPagination from "../../ArrowPagination";
 import BlogsItem from "../../BlogItem";
-import VisibilitySensor from "../../VisibilitySensor/VisibilitySensor";
+import VisibilitySensor from "../../VisibilitySensor";
 
 const AllBlogsSection = ({ state, page }) => {
   return (

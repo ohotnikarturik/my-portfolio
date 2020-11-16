@@ -7,7 +7,7 @@ import SectionTitle from "../../SectionTitle";
 import MainButton from "../../MainButton";
 import BlogItem from "../../BlogItem";
 import WaveShape from "../../WaveShape";
-import VisibilitySensor from "../../VisibilitySensor/VisibilitySensor";
+import VisibilitySensor from "../../VisibilitySensor";
 
 const BlogsSection = ({ state }) => {
   return (
