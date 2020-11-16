@@ -15,8 +15,8 @@ const CarouselItem = ({ img, subtitle, descText1, descText2, socials, onHoverSli
       <div className={style.workImg} style={imageStyle(img)} />
       <div className={style.descContainer}>
         <SectionSubtitle subtitle={subtitle} />
-        <div className={style.descText}>{descText1}</div>
-        <div className={style.descText}>{descText2}</div>
+        <div className={style.descText1}>{descText1}</div>
+        <div className={style.descText2}>{descText2}</div>
         <ul className={style.socialsContainer}>
           {socials.map((icon) => (
             <SocialsItem

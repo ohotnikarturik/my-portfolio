@@ -7,6 +7,7 @@ import Logo from "../Logo";
 import NavBarItem from "../NavBarItem";
 import HamburgerMenu from "../HamburgerMenu";
 import { Link } from "react-router-dom";
+import Progress from "../Progress";
 // import ThemeMode from "../ThemeMode";
 
 const Header = ({ state, page }) => {
@@ -60,6 +61,7 @@ const Header = ({ state, page }) => {
 
   return (
     <header className={isFixedHeader ? style.header_fixed : style.header}>
+      <Progress />
       <div className={`container ${style.container}`}>
         <div className={isFixedHeader ? style.logo_notVisible : null}>
           <Logo />

@@ -6,6 +6,10 @@
   width: 100%;
   height: 100%;
   display: flex;
+
+  @include tablets {
+    @include flex(column-reverse )
+  }
 }
 
 .workImg {
@@ -16,16 +20,40 @@
 }
 
 .descContainer {
-  width: 30%;
+  width: 40%;
   @include flex(column, flex-start);
   background-color: rgba(255,255,255, .8);
   padding: rem(20px) rem(10px);
-  box-shadow: 0 0 rem(10px) rem(-3px) $black;
+  border-left: rem(1px) solid $light-gray;
+  //box-shadow: 0 0 rem(10px) rem(-3px) $black;
+
+  @include tablets {
+    width: 100%;
+    min-height: rem(250px);
+    border-bottom: rem(1px) solid $light-gray;
+  }
+
+  @include phones {
+    min-height: rem(350px);
+  }
 }
 
-.descText {
+.descText1 {
   margin: rem(20px) 0;
   text-align: left;
+
+  @include tablets {
+    margin: rem(10px) 0;
+  }
+}
+
+.descText2 {
+  margin-bottom: rem(20px);
+  text-align: left;
+
+  @include tablets {
+    margin-bottom: rem(10px);
+  }
 }
 
 .socialsContainer {

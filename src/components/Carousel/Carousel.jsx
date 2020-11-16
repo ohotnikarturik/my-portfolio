@@ -5,21 +5,21 @@ import Slider from "@farbenmeer/react-spring-slider";
 import CarouselItem from "../CarouselItem";
 
 const Carousel = ({ state }) => {
-  const [isAutoSlide, setIsAutoSlide] = useState(5000);
-  
+  const [autoSlide, setAutoSlide] = useState(5000);
+
   const onHoverSlideMove = () => {
-    setIsAutoSlide(0)
-  }
-  
+    setAutoSlide(0);
+  };
+
   const onHoverOutSlideMove = () => {
-    setIsAutoSlide(5000)
-  }
-  
+    setAutoSlide(5000);
+  };
+
   return (
     <Slider
-      auto={isAutoSlide}
+      auto={autoSlide}
       hasBullets
-      bulletStyle={{ backgroundColor: "#278ad5" }}
+      bulletStyle={{ backgroundColor: "#278ad5", border: "1px solid #fff" }}
     >
       {state.works.map((work) => (
         <CarouselItem
