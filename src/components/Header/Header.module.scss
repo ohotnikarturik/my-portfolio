@@ -26,11 +26,17 @@
 .container {
   display: flex;
   align-items: center;
+
+  @include tablets {
+    padding: 0 rem(30px);
+  }
 }
 
-.logo_notVisible {
- display: none;
-}
+//.logo_notVisible {
+// display: none;
+//
+//  @include tablets
+//}
 
 .nav {
   margin-left: auto;

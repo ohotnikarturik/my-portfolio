@@ -1,15 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import style from "./HamburgerMenu.module.scss";
 
-const HamburgerMenu = () => {
+const HamburgerMenu = ({ onClick }) => {
   return (
-    <div className={style.hamburgerMenu}>
-      <a
-        href="#"
-        className={style.link}
-        aria-label="menu navigation"
-      >
+    <div onClick={onClick} className={style.hamburgerMenu}>
+      <a className={style.link} aria-label="menu navigation">
         <ul className={style.list}>
           <li className={style.item} />
           <li className={style.item} />
@@ -18,6 +15,10 @@ const HamburgerMenu = () => {
       </a>
     </div>
   );
+};
+
+HamburgerMenu.propTypes = {
+  onClick: PropTypes.func,
 };
 
 export default HamburgerMenu;

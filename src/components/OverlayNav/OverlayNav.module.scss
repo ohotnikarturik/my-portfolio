@@ -1,0 +1,56 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+
+.overlayContainer {
+  position: fixed;
+  z-index: 1100;
+  background-color: rgba(255, 255, 255, 0.95);
+  width: 100%;
+  height: 100%;
+  padding: 0 rem(30px);
+}
+
+.overlayHeader {
+  @include flex(row, space-between);
+  height: rem(80px);
+  display: flex;
+  align-items: center;
+}
+
+.btnClose {
+  font-size: rem(38px);
+  font-weight: bold;
+  padding-right: rem(9px);
+  cursor: pointer;
+}
+
+.overlayNavList {
+  @include flex(column);
+  width: 100%;
+  height: 100%;
+  margin-top: rem(-80px);
+}
+
+.item {
+  margin-bottom: rem(40px);
+  cursor: pointer;
+}
+
+.link {
+  font-size: rem(30px);
+  @include glacial(bold);
+  transition: color 250ms ;
+
+  &:hover {
+    color: $blue;
+    border-bottom: rem(4px) solid $blue;
+  }
+
+  &_active {
+    color: $blue;
+    border-bottom: rem(4px) solid $blue;
+  }
+}
+

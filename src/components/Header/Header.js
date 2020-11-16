@@ -8,10 +8,12 @@ import NavBarItem from "../NavBarItem";
 import HamburgerMenu from "../HamburgerMenu";
 import { Link } from "react-router-dom";
 import Progress from "../Progress";
+import OverlayNav from "../OverlayNav";
 // import ThemeMode from "../ThemeMode";
 
 const Header = ({ state, page }) => {
   const [isFixedHeader, setIsFixedHeader] = useState(false);
+  const [isShowOverlay, setIsShowOverlay] = useState(false);
 
   const scrollHandler = () => {
     if (window.scrollY > 120) {
@@ -19,6 +21,20 @@ const Header = ({ state, page }) => {
     } else {
       setIsFixedHeader(false);
     }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, [isFixedHeader]);
+
+  const showOverlayNav = () => {
+    setIsShowOverlay(true);
+  };
+
+  const hideOverlayNav = () => {
+    setIsShowOverlay(false);
   };
 
   const setNavigation = (navPage) => {
@@ -53,11 +69,9 @@ const Header = ({ state, page }) => {
     }
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
-
-    return () => window.removeEventListener("scroll", scrollHandler);
-  }, [isFixedHeader]);
+  if (isShowOverlay) {
+    return <OverlayNav state={state} onClick={hideOverlayNav} />;
+  }
 
   return (
     <header className={isFixedHeader ? style.header_fixed : style.header}>
@@ -68,7 +82,7 @@ const Header = ({ state, page }) => {
         </div>
         <div className={style.nav}>
           <ul className={style.list}>{setNavigation(page)}</ul>
-          <HamburgerMenu />
+          <HamburgerMenu onClick={showOverlayNav} />
         </div>
         <div className={style.themeMode}>{/*<ThemeMode />*/}</div>
       </div>
