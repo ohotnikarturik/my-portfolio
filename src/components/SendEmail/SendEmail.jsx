@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs, { init } from "emailjs-com";
 import { Formik } from "formik";
 import { object, string } from "yup";
 import { useAlert } from "react-alert";
@@ -14,6 +14,8 @@ import SectionSubtitle from "../SectionSubtitle";
 import { Spring } from "react-spring/renderprops";
 import VisibilitySensor from "../VisibilitySensor";
 import Spinner from "../Spinner";
+
+init(USER_ID);
 
 export default function SendEmail() {
   const [showSentImage, setShowSentImage] = useState(false);
@@ -43,7 +45,7 @@ export default function SendEmail() {
         showImageHandler(values.name);
       },
       (error) => {
-        console.log(error)
+        console.log(error);
         alert.error(`${error.text}. Try again!`);
       }
     );
