@@ -82,7 +82,7 @@ const OverlayNav = ({ state, onClick, page }) => {
 };
 
 OverlayNav.propTypes = {
-  onClick: PropTypes.bool,
+  onClick: PropTypes.func,
   state: PropTypes.object,
   page: PropTypes.string,
 };

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Spring } from "react-spring/renderprops";
 
-import imgHome from "../../../assets/img/content/hero-img.svg";
+import myImg from "../../../assets/img/content/arturik-nofone.png";
 import sprite from "../../../assets/img/sprite.svg";
 import style from "./HomeSection.module.scss";
 import SectionTitle from "../../SectionTitle";
@@ -72,7 +72,7 @@ const HomeSection = ({ state }) => {
                   </div>
                 </div>
                 <div className={style.img}>
-                  <img className={style.imgPic} src={imgHome} alt="developer" />
+                  <img className={style.imgPic} src={myImg} alt="developer" />
                 </div>
                 <div className={style.arrowDown}>
                   <ArrowDown />

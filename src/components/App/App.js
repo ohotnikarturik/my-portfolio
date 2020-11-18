@@ -22,7 +22,7 @@ const App = ({ state }) => {
   useEffect(() => {
     setTimeout(() => {
       setIsSpinner(false);
-    }, 0);
+    }, 2000);
   }, []);
 
   if (isSpinner) return <div className={style.spinnerContainer}><Spinner /></div> ;
