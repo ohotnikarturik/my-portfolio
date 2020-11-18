@@ -43,6 +43,7 @@ export default function SendEmail() {
         showImageHandler(values.name);
       },
       (error) => {
+        console.log(error)
         alert.error(`${error.text}. Try again!`);
       }
     );
