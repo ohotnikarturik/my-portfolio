@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import emailjs, {init} from "emailjs-com";
+import emailjs from "emailjs-com";
 import { Formik } from "formik";
 import { object, string } from "yup";
 import { useAlert } from "react-alert";
@@ -36,7 +36,6 @@ export default function SendEmail() {
     }, 5000);
   };
   
-  init(USER_ID)
   console.log(USER_ID)
 
   const sendEmail = (values) => {
