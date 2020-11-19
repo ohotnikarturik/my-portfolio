@@ -37,11 +37,13 @@
 
 .innerBlock {
   @include flex(column, space-around);
+  width: 100%;
+  padding: rem(0px) rem(10px);
 }
 
 .img {
   width: rem(40px);
   height: rem(40px);
   fill: $white;
-  margin-bottom: rem(20px);
+  margin-bottom: rem(10px);
 }

@@ -35,6 +35,7 @@ const SkillsSection = ({ state }) => {
                         img={item.img}
                         subtitle={item.subtitle}
                         href={item.href}
+                        completed={item.completed}
                       />
                     ))}
                   </ul>

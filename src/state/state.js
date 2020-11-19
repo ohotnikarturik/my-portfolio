@@ -176,6 +176,7 @@ const state = {
       subtitle: "Html5",
       ariaLabel: "Link-button to view skill",
       href: "https://www.w3schools.com/html/",
+      completed: 90
     },
     {
       id: 2,
@@ -183,6 +184,7 @@ const state = {
       subtitle: "Css3",
       ariaLabel: "Link-button to view skill",
       href: "https://www.w3schools.com/css/",
+      completed: 80
     },
     {
       id: 3,
@@ -190,6 +192,7 @@ const state = {
       subtitle: "Sass",
       ariaLabel: "Link-button to view skill",
       href: "https://sass-lang.com/",
+      completed: 70
     },
     {
       id: 4,
@@ -197,6 +200,7 @@ const state = {
       subtitle: "Responsive design",
       ariaLabel: "Link-button to view skill",
       href: "https://www.w3schools.com/html/html_responsive.asp",
+      completed: 70
     },
     {
       id: 5,
@@ -204,6 +208,7 @@ const state = {
       subtitle: "Java Script",
       ariaLabel: "Link-button to view skill",
       href: "https://javascript.info/",
+      completed: 70
     },
     {
       id: 6,
@@ -211,6 +216,7 @@ const state = {
       subtitle: "TypeScript",
       ariaLabel: "Link-button to view skill",
       href: "https://www.typescriptlang.org/",
+      completed: 50
     },
     {
       id: 7,
@@ -218,6 +224,7 @@ const state = {
       subtitle: "React",
       ariaLabel: "Link-button to view skill",
       href: "https://reactjs.org/",
+      completed: 70
     },
     {
       id: 8,
@@ -225,6 +232,7 @@ const state = {
       subtitle: "React Native",
       ariaLabel: "Link-button to view skill",
       href: "https://reactnative.dev/",
+      completed: 50
     },
     {
       id: 9,
@@ -232,6 +240,7 @@ const state = {
       subtitle: "Redux",
       ariaLabel: "Link-button to view skill",
       href: "https://redux.js.org/",
+      completed: 60
     },
     {
       id: 10,
@@ -239,6 +248,7 @@ const state = {
       subtitle: "Node.js",
       ariaLabel: "Link-button to view skill",
       href: "https://nodejs.org/en/",
+      completed: 40
     },
     {
       id: 11,
@@ -246,6 +256,7 @@ const state = {
       subtitle: "Express.js",
       ariaLabel: "Link-button to view skill",
       href: "https://expressjs.com/",
+      completed: 40
     },
     {
       id: 12,
@@ -253,6 +264,7 @@ const state = {
       subtitle: "MongoDB",
       ariaLabel: "Link-button to view skill",
       href: "https://www.mongodb.com/",
+      completed: 50
     },
     {
       id: 13,
@@ -260,6 +272,7 @@ const state = {
       subtitle: "Rest API",
       ariaLabel: "Link-button to view skill",
       href: "https://www.restapitutorial.com/",
+      completed: 40
     },
     {
       id: 14,
@@ -267,6 +280,7 @@ const state = {
       subtitle: "GraphQL",
       ariaLabel: "Link-button to view skill",
       href: "https://graphql.org/",
+      completed: 40
     },
     {
       id: 15,
@@ -274,6 +288,7 @@ const state = {
       subtitle: "AWS Amplify",
       ariaLabel: "Link-button to view skill",
       href: "https://aws.amazon.com/amplify/",
+      completed: 50
     },
     {
       id: 16,
@@ -281,6 +296,7 @@ const state = {
       subtitle: "Contentful",
       ariaLabel: "Link-button to view skill",
       href: "https://www.contentful.com/",
+      completed: 60
     },
   ],
   blogs: [

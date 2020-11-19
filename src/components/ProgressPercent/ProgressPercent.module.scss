@@ -1,0 +1,29 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.containerStyles {
+  width: 100%;
+  background-color: #e0e0de;
+  border-radius: rem(10px);
+  margin: rem(10px) rem(0px);
+}
+
+.fillerStyles {
+  height: 100%;
+  background-color: $white;
+  border-radius: inherit;
+  transition: width 1s ease-in-out;
+  padding: rem(3px) rem(0px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.labelStyles {
+  color: $blue;
+  font-weight: bold;
+  @include flex(row, flex-end);
+  font-size: rem(12px);
+  height: rem(10px);
+}
