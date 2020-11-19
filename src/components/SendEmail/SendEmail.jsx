@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { Formik } from "formik";
 import { object, string } from "yup";
-import { useAlert } from "react-alert";
 
 const SERVICE_ID = process.env.REACT_APP_MY_SERVICE_ID;
 const TEMPLATE_ID = process.env.REACT_APP_MY_TEMPLATE_ID;
@@ -18,8 +17,8 @@ import Spinner from "../Spinner";
 export default function SendEmail() {
   const [showSentImage, setShowSentImage] = useState(false);
   const [showSpinner, setShowSpinner] = useState(false);
+  const [showError, setShowError] = useState(false);
   const [guestName, setGuestName] = useState("");
-  const alert = useAlert();
   const initialValues = {
     name: "",
     email: "",
@@ -35,8 +34,6 @@ export default function SendEmail() {
       setGuestName("");
     }, 5000);
   };
-  
-  console.log(USER_ID)
 
   const sendEmail = (values) => {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, values, USER_ID).then(
@@ -44,9 +41,10 @@ export default function SendEmail() {
         setShowSpinner(false);
         showImageHandler(values.name);
       },
-      (error) => {
-        console.log(error)
-        alert.error(`${error.text}. Try again!`);
+      () => {
+        setShowSpinner(false);
+        setGuestName(values.name);
+        setShowError(true);
       }
     );
   };
@@ -79,7 +77,7 @@ export default function SendEmail() {
     return <Spinner />;
   }
 
-  if (showSentImage) {
+  if (showSentImage || showError) {
     return (
       <VisibilitySensor partialVisibility once>
         {({ isVisible }) => (
@@ -90,14 +88,22 @@ export default function SendEmail() {
           >
             {(props) => (
               <div style={props} className={style.messageImageContainer}>
-                <svg className={style.messageImg}>
-                  <use href={`${sprite}#envelope`} />
-                </svg>
-                <SectionSubtitle subtitle="Message was send!" />
-                <div className={style.messageText}>
-                  {`I will contact you ${guestName} soon!`}
-                </div>
-                <div className={style.messageText}>Thank you.</div>
+                {showSentImage ? (
+                  <>
+                    <svg className={style.messageImg}>
+                      <use href={`${sprite}#envelope`} />
+                    </svg>
+                    <SectionSubtitle subtitle="Message was send!" />
+                    <div className={style.messageText}>
+                      {`I will contact you ${guestName} soon!`}
+                    </div>
+                    <div className={style.messageText}>Thank you.</div>
+                  </>
+                ) : (
+                  <div className={style.messageText_error}>
+                    {`Sorry ${guestName}, something went wrong, try again!`}
+                  </div>
+                )}
               </div>
             )}
           </Spring>

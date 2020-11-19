@@ -17,6 +17,11 @@
   margin-top: rem(10px);
 }
 
+.messageText_error {
+  @extend .messageText;
+  color: $red;
+}
+
 .form {
   @include flex(column);
   height: 100%;
