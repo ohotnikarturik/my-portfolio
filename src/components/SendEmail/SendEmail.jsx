@@ -35,16 +35,23 @@ export default function SendEmail() {
     }, 5000);
   };
 
+  const showErrorHandler = (val) => {
+    setShowSpinner(false);
+    setGuestName(val.name);
+    setShowError(true);
+    setTimeout(() => {
+      setShowError(false);
+    }, 5000);
+  };
   const sendEmail = (values) => {
     emailjs.send(SERVICE_ID, TEMPLATE_ID, values, USER_ID).then(
       () => {
         setShowSpinner(false);
         showImageHandler(values.name);
       },
-      () => {
-        setShowSpinner(false);
-        setGuestName(values.name);
-        setShowError(true);
+      (error) => {
+        console.log(error.text);
+        showErrorHandler(values);
       }
     );
   };
