@@ -12,8 +12,12 @@ const ProgressPercent = ({ completed }) => {
   const fillerStyles = {
     width: `${initCompleted}%`,
   };
-  
-  const spring = useSpring({config: { duration: 1000 }, from: { val: initCompleted }, to: { val: initCompleted } });
+
+  const spring = useSpring({
+    config: { duration: 1000 },
+    from: { val: initCompleted },
+    to: { val: initCompleted },
+  });
 
   return (
     <VisibilitySensor partialVisibility once>
@@ -28,7 +32,7 @@ const ProgressPercent = ({ completed }) => {
               {isVisible && setInitCompleted(completed)}
               <div className={styles.fillerStyles} style={fillerStyles}>
                 <animated.div className={styles.labelStyles}>
-                    {spring.val.interpolate(val => Math.floor(val))}
+                  {spring.val.interpolate((val) => Math.floor(val))}
                 </animated.div>
                 <div className={styles.labelStyles}>%</div>
               </div>
