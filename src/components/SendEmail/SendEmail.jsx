@@ -3,9 +3,11 @@ import emailjs from "emailjs-com";
 import { Formik } from "formik";
 import { object, string } from "yup";
 
-const SERVICE_ID = process.env.REACT_APP_MY_SERVICE_ID;
-const TEMPLATE_ID = process.env.REACT_APP_MY_TEMPLATE_ID;
-const USER_ID = process.env.REACT_APP_MY_USER_ID;
+const {
+  REACT_APP_MY_SERVICE_ID,
+  REACT_APP_MY_TEMPLATE_ID,
+  REACT_APP_MY_USER_ID,
+} = process.env;
 
 import style from "./SendEmail.module.scss";
 import MainButton from "../MainButton";
@@ -45,7 +47,7 @@ export default function SendEmail() {
     }, 5000);
   };
   const sendEmail = (values) => {
-    emailjs.send(SERVICE_ID, TEMPLATE_ID, values, USER_ID).then(
+    emailjs.send(REACT_APP_MY_SERVICE_ID, REACT_APP_MY_TEMPLATE_ID, values, REACT_APP_MY_USER_ID).then(
       () => {
         setShowSpinner(false);
         showImageHandler(values.name);
