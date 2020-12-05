@@ -4,6 +4,7 @@ import work2 from "../assets/img/content/myWorks/work-2.jpg";
 import work3 from "../assets/img/content/myWorks/work-3.jpg";
 import work4 from "../assets/img/content/myWorks/work-4.jpg";
 import work5 from "../assets/img/content/myWorks/work-5.jpg";
+import work6 from "../assets/img/content/myWorks/work-6.jpg";
 
 const state = {
   navHome: [
@@ -167,6 +168,27 @@ const state = {
         },
       ],
       img: work5,
+    },
+    {
+      id: 6,
+      subtitle: "Mika Rekilae",
+      descText1: "Stattic Web site for Cow farmer",
+      descText2: "HTML, CSS, BEM, JavaScript, JQuery",
+      socials: [
+        {
+          id: 1,
+          ariaLabel: "Link to github",
+          img: "git",
+          link: "https://github.com/websitegithub/mikarekilae",
+        },
+        {
+          id: 2,
+          ariaLabel: "Link to website",
+          img: "openPage",
+          link: "https://websitegithub.github.io/mikarekilae/index.html",
+        },
+      ],
+      img: work6,
     },
   ],
   skills: [

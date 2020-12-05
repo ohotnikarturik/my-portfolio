@@ -18,6 +18,7 @@ const Carousel = ({ state }) => {
   return (
     <Slider
       auto={autoSlide}
+      hasArrows
       hasBullets
       bulletStyle={{ backgroundColor: "#278ad5", border: "1px solid #fff" }}
     >
