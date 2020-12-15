@@ -35,7 +35,7 @@ const HomeSection = ({ state }) => {
                     <h1 className={style.titleName}>Artur.</h1>
                   </div>
                   <div className={style.profession}>
-                    <SectionTitle title={"Full Stack Developer"} />
+                    <SectionTitle title={"Junior Full Stack Developer"} />
                   </div>
                   <div className={style.desc}>
                     <h4 className={style.descTitle}>I can build web and mobile applications</h4>
