@@ -11,7 +11,7 @@ const state = {
     { id: 1, name: "Home" },
     { id: 2, name: "Works" },
     { id: 3, name: "Skills" },
-    { id: 4, name: "Blogs" },
+    { id: 4, name: "Certifications" },
     { id: 5, name: "Contact" },
   ],
   navAllBlogs: [{ id: 1, name: "Home" }],
@@ -67,7 +67,8 @@ const state = {
     {
       id: 1,
       subtitle: "World Countries Generator",
-      descText1: "Get a list of countries' names. Display list of countries. Filter list of names, names starts from letters, names includes letters. Sort list. Display amount of list.",
+      descText1:
+        "Get a list of countries' names. Display list of countries. Filter list of names, names starts from letters, names includes letters. Sort list. Display amount of list.",
       descText2: "HTML, CSS, JavaScript",
       socials: [
         {
@@ -75,12 +76,14 @@ const state = {
           ariaLabel: "Link to github",
           img: "git",
           link: "https://github.com/ohotnikarturik/worldCountries-generator",
+          socialName: "GitHub ",
         },
         {
           id: 2,
           ariaLabel: "Link to website",
           img: "openPage",
           link: "https://ohotnikarturik.github.io/worldCountries-generator/",
+          socialName: "Demo",
         },
       ],
       img: work1,
@@ -88,20 +91,24 @@ const state = {
     {
       id: 2,
       subtitle: "Burger One-Page Scroll",
-      descText1: "A responsive website built to further improve the understanding of relevant Technologies.",
-      descText2: "HTML, CSS, SASS, BEM, JavaScript, JQuery, Yandex.Maps API, responsive and adaptive design",
+      descText1:
+        "A responsive website built to further improve the understanding of relevant Technologies.",
+      descText2:
+        "HTML, CSS, SASS, BEM, JavaScript, JQuery, Yandex.Maps API, responsive and adaptive design",
       socials: [
         {
           id: 1,
           ariaLabel: "Link to github",
           img: "git",
           link: "https://github.com/ohotnikarturik/BurgerEn",
+          socialName: "GitHub ",
         },
         {
           id: 2,
           ariaLabel: "Link to website",
           img: "openPage",
           link: "https://ohotnikarturik.github.io/BurgerEn/",
+          socialName: "Demo",
         },
       ],
       img: work2,
@@ -109,20 +116,24 @@ const state = {
     {
       id: 3,
       subtitle: "Product countries",
-      descText1: "This app is a small example of an E-Commerce web application. Get a list of products by fetching data from API. Filter list by name. Sort list. Open product to get more info. Add product/s to basket and remove from the basket. Switch color theme.",
+      descText1:
+        "This app is a small example of an E-Commerce web application. Get a list of products by fetching data from API. Filter list by name. Sort list. Open product to get more info. Add product/s to basket and remove from the basket. Switch color theme.",
       descText2: "CSS, Materialize CSS, React.js, JavaScript, Redux",
       socials: [
         {
           id: 1,
           ariaLabel: "Link to github",
           img: "git",
-          link: "https://github.com/ohotnikarturik/full-stack-4-typescript-redux-template/tree/react-redux-ts-artur-newversion",
+          link:
+            "https://github.com/ohotnikarturik/full-stack-4-typescript-redux-template/tree/react-redux-ts-artur-newversion",
+          socialName: "GitHub ",
         },
         {
           id: 2,
           ariaLabel: "Link to website",
           img: "openPage",
           link: "https://eloquent-benz-3bb6de.netlify.app/",
+          socialName: "Demo",
         },
       ],
       img: work3,
@@ -130,7 +141,8 @@ const state = {
     {
       id: 4,
       subtitle: "My Portfolio",
-      descText1: "My Portfolio is animated, scrollable and fully responsive, a web application, which I am proud of. Home section about me description. My Works, which I made during the studying. My skills which I achieved. My Blog, where I share my thoughts. And the Contact section, where you can send an email message to me.",
+      descText1:
+        "My Portfolio is animated, scrollable and fully responsive, a web application, which I am proud of. Home section about me description. My Works, which I made during the studying. My skills which I achieved. My Blog, where I share my thoughts. And the Contact section, where you can send an email message to me.",
       descText2: "CSS, SASS, JavaScript, React.js, EmailJS",
       socials: [
         {
@@ -138,12 +150,14 @@ const state = {
           ariaLabel: "Link to github",
           img: "git",
           link: "https://github.com/ohotnikarturik/my-portfolio",
+          socialName: "GitHub ",
         },
         {
           id: 2,
           ariaLabel: "Link to website",
           img: "openPage",
           link: "",
+          socialName: "Demo",
         },
       ],
       img: work4,
@@ -151,7 +165,8 @@ const state = {
     {
       id: 5,
       subtitle: "Terveet Tavat",
-      descText1: "A team work project for private fitness trainer Sami Ylipuranene. This is a responsive website with blog functionality. My role was to create the UI design, styling in the responsiveness, animation as well as building components and working on some of the functionalities.",
+      descText1:
+        "A team work project for private fitness trainer Sami Ylipuranene. This is a responsive website with blog functionality. My role was to create the UI design, styling in the responsiveness, animation as well as building components and working on some of the functionalities.",
       descText2: "CSS, Contentful, JavaScript, React.js, Gatsby.js, MailShip",
       socials: [
         {
@@ -159,12 +174,14 @@ const state = {
           ariaLabel: "Link to github",
           img: "git",
           link: "https://github.com/ohotnikarturik/sami_ylipuranen",
+          socialName: "GitHub ",
         },
         {
           id: 2,
           ariaLabel: "Link to website",
           img: "openPage",
           link: "https://terveettavat.fi/",
+          socialName: "Demo",
         },
       ],
       img: work5,
@@ -180,12 +197,14 @@ const state = {
           ariaLabel: "Link to github",
           img: "git",
           link: "https://github.com/websitegithub/mikarekilae",
+          socialName: "GitHub ",
         },
         {
           id: 2,
           ariaLabel: "Link to website",
           img: "openPage",
           link: "https://websitegithub.github.io/mikarekilae/index.html",
+          socialName: "Demo",
         },
       ],
       img: work6,
@@ -198,7 +217,7 @@ const state = {
       subtitle: "Html5",
       ariaLabel: "Link-button to view skill",
       href: "https://www.w3schools.com/html/",
-      completed: 90
+      completed: 90,
     },
     {
       id: 2,
@@ -206,7 +225,7 @@ const state = {
       subtitle: "Css3",
       ariaLabel: "Link-button to view skill",
       href: "https://www.w3schools.com/css/",
-      completed: 80
+      completed: 80,
     },
     {
       id: 3,
@@ -214,7 +233,7 @@ const state = {
       subtitle: "Sass",
       ariaLabel: "Link-button to view skill",
       href: "https://sass-lang.com/",
-      completed: 70
+      completed: 70,
     },
     {
       id: 4,
@@ -222,7 +241,7 @@ const state = {
       subtitle: "Responsive design",
       ariaLabel: "Link-button to view skill",
       href: "https://www.w3schools.com/html/html_responsive.asp",
-      completed: 70
+      completed: 70,
     },
     {
       id: 5,
@@ -230,7 +249,7 @@ const state = {
       subtitle: "Java Script",
       ariaLabel: "Link-button to view skill",
       href: "https://javascript.info/",
-      completed: 70
+      completed: 70,
     },
     {
       id: 6,
@@ -238,7 +257,7 @@ const state = {
       subtitle: "TypeScript",
       ariaLabel: "Link-button to view skill",
       href: "https://www.typescriptlang.org/",
-      completed: 50
+      completed: 50,
     },
     {
       id: 7,
@@ -246,7 +265,7 @@ const state = {
       subtitle: "React",
       ariaLabel: "Link-button to view skill",
       href: "https://reactjs.org/",
-      completed: 70
+      completed: 70,
     },
     {
       id: 8,
@@ -254,7 +273,7 @@ const state = {
       subtitle: "React Native",
       ariaLabel: "Link-button to view skill",
       href: "https://reactnative.dev/",
-      completed: 50
+      completed: 50,
     },
     {
       id: 9,
@@ -262,7 +281,7 @@ const state = {
       subtitle: "Redux",
       ariaLabel: "Link-button to view skill",
       href: "https://redux.js.org/",
-      completed: 60
+      completed: 60,
     },
     {
       id: 10,
@@ -270,7 +289,7 @@ const state = {
       subtitle: "Node.js",
       ariaLabel: "Link-button to view skill",
       href: "https://nodejs.org/en/",
-      completed: 40
+      completed: 40,
     },
     {
       id: 11,
@@ -278,7 +297,7 @@ const state = {
       subtitle: "Express.js",
       ariaLabel: "Link-button to view skill",
       href: "https://expressjs.com/",
-      completed: 40
+      completed: 40,
     },
     {
       id: 12,
@@ -286,7 +305,7 @@ const state = {
       subtitle: "MongoDB",
       ariaLabel: "Link-button to view skill",
       href: "https://www.mongodb.com/",
-      completed: 50
+      completed: 50,
     },
     {
       id: 13,
@@ -294,7 +313,7 @@ const state = {
       subtitle: "Rest API",
       ariaLabel: "Link-button to view skill",
       href: "https://www.restapitutorial.com/",
-      completed: 40
+      completed: 40,
     },
     {
       id: 14,
@@ -302,7 +321,7 @@ const state = {
       subtitle: "GraphQL",
       ariaLabel: "Link-button to view skill",
       href: "https://graphql.org/",
-      completed: 40
+      completed: 40,
     },
     {
       id: 15,
@@ -310,7 +329,7 @@ const state = {
       subtitle: "AWS Amplify",
       ariaLabel: "Link-button to view skill",
       href: "https://aws.amazon.com/amplify/",
-      completed: 50
+      completed: 50,
     },
     {
       id: 16,
@@ -318,7 +337,7 @@ const state = {
       subtitle: "Contentful",
       ariaLabel: "Link-button to view skill",
       href: "https://www.contentful.com/",
-      completed: 60
+      completed: 60,
     },
   ],
   blogs: [

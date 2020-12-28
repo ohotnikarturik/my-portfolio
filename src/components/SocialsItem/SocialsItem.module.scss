@@ -10,19 +10,31 @@
   }
 }
 
-.img {
-  width: rem(20px);
-  height: rem(20px);
-  fill: $blue;
+.socialName {
+  @include glacial(bold);
+  margin-right: rem(10px);
+  color: $blue;
+}
+
+.link {
+  @include flex(row, center, center);
   transition: all .3s;
 
   &:hover {
     fill: lighten($blue, 10%);
     transform: scale(1.1, 1.1);
   }
+}
+
+.img {
+  width: rem(20px);
+  height: rem(20px);
+  fill: $blue;
 
   &_color_white {
     fill: $white;
+    width: rem(20px);
+    height: rem(20px);
 
     &:hover {
       fill: darken($white, 10%);

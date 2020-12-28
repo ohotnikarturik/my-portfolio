@@ -14,6 +14,7 @@ const Footer = ({ state }) => {
           <ul className={style.list}>
             {state.socials.map((item) => (
               <SocialsItem
+                whiteColor
                 key={item.id}
                 ariaLabel={item.ariaLabel}
                 img={item.img}

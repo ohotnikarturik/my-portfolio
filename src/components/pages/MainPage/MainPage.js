@@ -5,7 +5,7 @@ import style from "./MainPage.module.scss";
 import HomeSection from "../../sections/HomeSection";
 import WorksSection from "../../sections/WorksSection";
 import SkillsSection from "../../sections/SkillsSection";
-import BlogsSection from "../../sections/BlogsSection";
+// import BlogsSection from "../../sections/BlogsSection";
 import ContactsSection from "../../sections/ContactsSection";
 import ParallaxSection from "../../sections/ParallaxSection";
 import Footer from "../../Footer";
@@ -17,7 +17,7 @@ const MainPage = ({ state }) => {
         <HomeSection state={state} />
         <WorksSection state={state} />
         <SkillsSection state={state} />
-        <BlogsSection state={state} />
+        {/* <BlogsSection state={state} /> */}
         <ContactsSection state={state} />
         <ParallaxSection />
       </main>

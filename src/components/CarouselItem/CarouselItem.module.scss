@@ -6,56 +6,36 @@
   width: 100%;
   height: 100%;
   display: flex;
-
-  @include tablets {
-    @include flex(column-reverse )
-  }
+  background-color: $white;
+  @include flex(column);
+  padding: rem(20px) rem(20px) rem(40px) rem(20px);
 }
 
 .workImg {
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-position: center;
 }
 
 .descContainer {
-  width: 40%;
-  @include flex(column, flex-start);
-  background-color: rgba(255,255,255, .8);
-  padding: rem(20px) rem(10px);
-  border-left: rem(1px) solid $light-gray;
-  //box-shadow: 0 0 rem(10px) rem(-3px) $black;
-
-  @include tablets {
-    width: 100%;
-    min-height: rem(250px);
-    border-bottom: rem(1px) solid $light-gray;
-  }
-
-  @include phones {
-    min-height: rem(300px);
-  }
+  @include flex(column, center);
 }
 
 .descText1 {
-  margin: rem(20px) 0;
-  text-align: left;
-
-  @include tablets {
-    margin: rem(10px) 0;
-  }
+  margin: rem(10px) 0;
+  text-align: center;
+  @include glacial(regularItalic);
 }
 
 .descText2 {
   margin-bottom: rem(20px);
-  text-align: left;
-
-  @include tablets {
-    margin-bottom: rem(10px);
-  }
+  text-align: center;
+  @include glacial(bold);
 }
 
 .socialsContainer {
   display: flex;
+  margin-top: rem(20px);
 }

@@ -12,11 +12,8 @@ const CarouselItem = ({ img, subtitle, descText1, descText2, socials, onHoverSli
 
   return (
     <div onMouseOver={onHoverSlideMove} onMouseOut={onHoverOutSlideMove} className={style.itemContainer}>
-      <div className={style.workImg} style={imageStyle(img)} />
       <div className={style.descContainer}>
         <SectionSubtitle subtitle={subtitle} />
-        <div className={style.descText1}>{descText1}</div>
-        <div className={style.descText2}>{descText2}</div>
         <ul className={style.socialsContainer}>
           {socials.map((icon) => (
             <SocialsItem
@@ -24,10 +21,14 @@ const CarouselItem = ({ img, subtitle, descText1, descText2, socials, onHoverSli
               img={icon.img}
               link={icon.link}
               ariaLabel={icon.ariaLabel}
+              socialName={icon.socialName}
             />
           ))}
         </ul>
+        <div className={style.descText1}>{descText1}</div>
+        <div className={style.descText2}>{descText2}</div>
       </div>
+      <div className={style.workImg} style={imageStyle(img)} />
     </div>
   );
 };
@@ -39,6 +40,7 @@ CarouselItem.propTypes = {
   descText2: PropTypes.string,
   link: PropTypes.string,
   linkGithub: PropTypes.string,
+  socialName: PropTypes.string,
   socials: PropTypes.array,
   onHoverSlideMove: PropTypes.func,
   onHoverOutSlideMove: PropTypes.func,
