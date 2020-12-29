@@ -12,6 +12,11 @@
   height: 100vh;
   min-height: rem(650px);
   overflow: hidden;
+  
+  @include tablets {
+    background-position: center;
+    background-attachment: unset;
+  }
 }
 
 .container {
@@ -25,10 +30,6 @@
   background-color: rgba($white, 0.6);
   border-radius: rem(10px);
   padding: rem(20px);
-
-  @include tablets {
-    margin-top: rem(110px);
-  }
 
   &::after {
     position: absolute;

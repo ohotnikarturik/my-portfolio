@@ -5,13 +5,13 @@ import style from "./CarouselItem.module.scss";
 import SectionSubtitle from "../SectionSubtitle";
 import SocialsItem from "../SocialsItem";
 
-const CarouselItem = ({ img, subtitle, descText1, descText2, socials, onHoverSlideMove, onHoverOutSlideMove }) => {
+const CarouselItem = ({ img, subtitle, descText1, descText2, socials }) => {
   const imageStyle = (src) => ({
     backgroundImage: `url(${src})`,
   });
 
   return (
-    <div onMouseOver={onHoverSlideMove} onMouseOut={onHoverOutSlideMove} className={style.itemContainer}>
+    <div className={style.itemContainer}>
       <div className={style.descContainer}>
         <SectionSubtitle subtitle={subtitle} />
         <ul className={style.socialsContainer}>
@@ -42,8 +42,6 @@ CarouselItem.propTypes = {
   linkGithub: PropTypes.string,
   socialName: PropTypes.string,
   socials: PropTypes.array,
-  onHoverSlideMove: PropTypes.func,
-  onHoverOutSlideMove: PropTypes.func,
 };
 
 export default CarouselItem;

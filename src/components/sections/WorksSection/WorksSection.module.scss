@@ -5,6 +5,8 @@
 .works {
   background-color: $light-gray;
   position: relative;
+  height: 110vh !important;
+  padding-bottom: rem(80px);
 }
 
 .container {
@@ -18,7 +20,7 @@
 .content {
   @include flex(column);
   box-shadow: 0 0 rem(10px) rem(-3px) $black;
-  height: 75%;
+  height: 80%;
 }
 
 .list {

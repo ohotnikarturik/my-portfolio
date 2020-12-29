@@ -5,6 +5,7 @@ import work3 from "../assets/img/content/myWorks/work-3.jpg";
 import work4 from "../assets/img/content/myWorks/work-4.jpg";
 import work5 from "../assets/img/content/myWorks/work-5.jpg";
 import work6 from "../assets/img/content/myWorks/work-6.jpg";
+import work7 from "../assets/img/content/myWorks/work-7.jpg";
 
 import certificateImg1 from "../assets/img/content/myCertificates/cert2.jpg";
 import certificateImg2 from "../assets/img/content/myCertificates/cert1.jpg";
@@ -47,23 +48,23 @@ const state = {
   works: [
     {
       id: 1,
-      subtitle: "World Countries Generator",
+      subtitle: "My Cloud Storage",
       descText1:
-        "Get a list of countries' names. Display list of countries. Filter list of names, names starts from letters, names includes letters. Sort list. Display amount of list.",
-      descText2: "HTML, CSS, JavaScript",
+        "My Cloud Storage' is a full stack app. The app's goal, secure to store and retrieve of clients data. 'My Cloud Storage' app is now in development mode. For now app has Authentication features: Sign Up , Sign In, Forgot Password and Change Password.",
+      descText2: "CSS, MaterializeCSS, JavaScript, React.js, Redux, AWS",
       socials: [
         {
           id: 1,
           ariaLabel: "Link to github",
           img: "git",
-          link: "https://github.com/ohotnikarturik/worldCountries-generator",
+          link: "https://github.com/ohotnikarturik/my-cloud-storage",
           socialName: "GitHub ",
         },
         {
           id: 2,
           ariaLabel: "Link to website",
           img: "openPage",
-          link: "https://ohotnikarturik.github.io/worldCountries-generator/",
+          link: "https://main.d3b0qy09er9iyp.amplifyapp.com/",
           socialName: "Demo",
         },
       ],
@@ -71,6 +72,104 @@ const state = {
     },
     {
       id: 2,
+      subtitle: "Yard",
+      descText1:
+        "A teamwork project. Mobile app to book, check in and plan a trip to Helsinki. The app includes all the essential information and services for the traveler.",
+      descText2:
+        "React Native, JavaScript, Expo, Native Base, TypeScript, Redux, Contentful CMS and AWS",
+      socials: [
+        {
+          id: 1,
+          ariaLabel: "Link to github",
+          img: "git",
+          link: "https://github.com/ohotnikarturik/yard-app",
+          socialName: "GitHub ",
+        },
+        {
+          id: 2,
+          ariaLabel: "Link to website",
+          img: "openPage",
+          link: "https://www.apple.com/app-store/",
+          socialName: "Demo",
+        },
+      ],
+      img: work2,
+    },
+    {
+      id: 3,
+      subtitle: "My Portfolio",
+      descText1:
+        "My Portfolio is animated, scrollable and fully responsive, a web app, which I am proud of. My Works. My skills which I achieved. My certifications and Contact section, where you can email me.",
+      descText2: "CSS, SASS, JavaScript, React.js, EmailJS",
+      socials: [
+        {
+          id: 1,
+          ariaLabel: "Link to github",
+          img: "git",
+          link: "https://github.com/ohotnikarturik/my-portfolio",
+          socialName: "GitHub ",
+        },
+        {
+          id: 2,
+          ariaLabel: "Link to website",
+          img: "openPage",
+          link: "",
+          socialName: "Demo",
+        },
+      ],
+      img: work3,
+    },
+    {
+      id: 4,
+      subtitle: "Terveet Tavat",
+      descText1:
+        "A teamwork project. This is a responsive web app with blog functionality. My role was to create the UI design, styling in the responsiveness, animation as well as building components and working on some of the functionalities.",
+      descText2: "CSS, Contentful, JavaScript, React.js, Gatsby.js, MailShip",
+      socials: [
+        {
+          id: 1,
+          ariaLabel: "Link to github",
+          img: "git",
+          link: "https://github.com/ohotnikarturik/sami_ylipuranen",
+          socialName: "GitHub ",
+        },
+        {
+          id: 2,
+          ariaLabel: "Link to website",
+          img: "openPage",
+          link: "https://terveettavat.fi/",
+          socialName: "Demo",
+        },
+      ],
+      img: work4,
+    },
+    {
+      id: 5,
+      subtitle: "Product countries",
+      descText1:
+        "This app has a small part of an E-Commerce web application. Get a list of products by fetching data from API. Filter and sort list. Add/remove product/s to from the basket. Switch color theme.",
+      descText2: "CSS, Materialize CSS, React.js, JavaScript, Redux",
+      socials: [
+        {
+          id: 1,
+          ariaLabel: "Link to github",
+          img: "git",
+          link:
+            "https://github.com/ohotnikarturik/full-stack-4-typescript-redux-template/tree/react-redux-ts-artur-newversion",
+          socialName: "GitHub ",
+        },
+        {
+          id: 2,
+          ariaLabel: "Link to website",
+          img: "openPage",
+          link: "https://eloquent-benz-3bb6de.netlify.app/",
+          socialName: "Demo",
+        },
+      ],
+      img: work5,
+    },
+    {
+      id: 6,
       subtitle: "Burger One-Page Scroll",
       descText1:
         "A responsive website built to further improve the understanding of relevant Technologies.",
@@ -92,83 +191,10 @@ const state = {
           socialName: "Demo",
         },
       ],
-      img: work2,
+      img: work6,
     },
     {
-      id: 3,
-      subtitle: "Product countries",
-      descText1:
-        "This app is a small example of an E-Commerce web application. Get a list of products by fetching data from API. Filter list by name. Sort list. Open product to get more info. Add product/s to basket and remove from the basket. Switch color theme.",
-      descText2: "CSS, Materialize CSS, React.js, JavaScript, Redux",
-      socials: [
-        {
-          id: 1,
-          ariaLabel: "Link to github",
-          img: "git",
-          link:
-            "https://github.com/ohotnikarturik/full-stack-4-typescript-redux-template/tree/react-redux-ts-artur-newversion",
-          socialName: "GitHub ",
-        },
-        {
-          id: 2,
-          ariaLabel: "Link to website",
-          img: "openPage",
-          link: "https://eloquent-benz-3bb6de.netlify.app/",
-          socialName: "Demo",
-        },
-      ],
-      img: work3,
-    },
-    {
-      id: 4,
-      subtitle: "My Portfolio",
-      descText1:
-        "My Portfolio is animated, scrollable and fully responsive, a web application, which I am proud of. Home section about me description. My Works, which I made during the studying. My skills which I achieved. My Blog, where I share my thoughts. And the Contact section, where you can send an email message to me.",
-      descText2: "CSS, SASS, JavaScript, React.js, EmailJS",
-      socials: [
-        {
-          id: 1,
-          ariaLabel: "Link to github",
-          img: "git",
-          link: "https://github.com/ohotnikarturik/my-portfolio",
-          socialName: "GitHub ",
-        },
-        {
-          id: 2,
-          ariaLabel: "Link to website",
-          img: "openPage",
-          link: "",
-          socialName: "Demo",
-        },
-      ],
-      img: work4,
-    },
-    {
-      id: 5,
-      subtitle: "Terveet Tavat",
-      descText1:
-        "A team work project for private fitness trainer Sami Ylipuranene. This is a responsive website with blog functionality. My role was to create the UI design, styling in the responsiveness, animation as well as building components and working on some of the functionalities.",
-      descText2: "CSS, Contentful, JavaScript, React.js, Gatsby.js, MailShip",
-      socials: [
-        {
-          id: 1,
-          ariaLabel: "Link to github",
-          img: "git",
-          link: "https://github.com/ohotnikarturik/sami_ylipuranen",
-          socialName: "GitHub ",
-        },
-        {
-          id: 2,
-          ariaLabel: "Link to website",
-          img: "openPage",
-          link: "https://terveettavat.fi/",
-          socialName: "Demo",
-        },
-      ],
-      img: work5,
-    },
-    {
-      id: 6,
+      id: 7,
       subtitle: "Mika Rekilae",
       descText1: "Stattic Web site for Cow farmer",
       descText2: "HTML, CSS, BEM, JavaScript, JQuery",
@@ -188,7 +214,7 @@ const state = {
           socialName: "Demo",
         },
       ],
-      img: work6,
+      img: work7,
     },
   ],
   skills: [
