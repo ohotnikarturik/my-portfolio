@@ -6,6 +6,11 @@ import work4 from "../assets/img/content/myWorks/work-4.jpg";
 import work5 from "../assets/img/content/myWorks/work-5.jpg";
 import work6 from "../assets/img/content/myWorks/work-6.jpg";
 
+import certificateImg1 from "../assets/img/content/myCertificates/cert2.jpg";
+import certificateImg2 from "../assets/img/content/myCertificates/cert1.jpg";
+import certificateImg3 from "../assets/img/content/myCertificates/cert3.jpg";
+import certificateImg4 from "../assets/img/content/myCertificates/cert4.jpg";
+
 const state = {
   navHome: [
     { id: 1, name: "Home" },
@@ -39,27 +44,9 @@ const state = {
       link: "https://www.facebook.com/ohotnik.art/",
     },
     {
-      id: 4,
-      ariaLabel: "Link to instagram",
-      img: "inst",
-      link: "https://www.linkedin.com/in/artur-okhotnichenko-9104b9190/",
-    },
-    {
-      id: 5,
-      ariaLabel: "Link to twitter",
-      img: "twitter",
-      link: "https://www.linkedin.com/in/artur-okhotnichenko-9104b9190/",
-    },
-    {
       id: 6,
       ariaLabel: "Link to skype",
       img: "sk",
-      link: "https://www.linkedin.com/in/artur-okhotnichenko-9104b9190/",
-    },
-    {
-      id: 7,
-      ariaLabel: "Link to call me",
-      img: "phone",
       link: "https://www.linkedin.com/in/artur-okhotnichenko-9104b9190/",
     },
   ],
@@ -398,6 +385,12 @@ const state = {
       text:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit.consectetur adipisicing elit. elit.",
     },
+  ],
+  certificates: [
+    { id: 1, img: certificateImg1 },
+    { id: 2, img: certificateImg2 },
+    { id: 3, img: certificateImg3 },
+    { id: 4, img: certificateImg4 },
   ],
 };
 

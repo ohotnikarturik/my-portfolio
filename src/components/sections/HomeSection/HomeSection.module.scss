@@ -45,6 +45,10 @@
 
 .profession {
   margin-bottom: rem(10px);
+  
+  @include phones {
+    text-align: center;
+  }
 }
 
 .desc {

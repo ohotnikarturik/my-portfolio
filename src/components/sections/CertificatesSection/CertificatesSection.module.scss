@@ -1,0 +1,33 @@
+@import "../../../scss/config/mixins";
+@import "../../../scss/config/function";
+@import "../../../scss/config/variables";
+
+.certificates {
+  background-color: $light-gray;
+  position: relative;
+  height: 100% !important;
+  padding-bottom: rem(80px);
+}
+
+.container {
+  padding-top: rem(40px);
+}
+
+.title {
+  margin-bottom: 60px;
+}
+
+.content {
+  @include flex(column);
+  height: 70%;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: rem(-15px);
+  margin-left: rem(-15px);
+  justify-content: center;
+  width: 100%;
+}
+

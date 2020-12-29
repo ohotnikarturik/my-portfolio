@@ -1,0 +1,39 @@
+@import "../../scss/config/mixins";
+@import "../../scss/config/function";
+@import "../../scss/config/variables";
+
+.item {
+  padding-right: rem(15px);
+  padding-left: rem(15px);
+  margin-bottom: rem(30px);
+  cursor: pointer;
+  flex: 0 0 50%;
+  max-width: 50%;
+  transition: all .3s;
+  height: 100%;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.03, 1.03);
+  }
+
+  @include tablets {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.imgContainer {
+  border-radius: rem(5px);
+  @include flex();
+  transition: all .3s;
+
+  &:hover {
+    box-shadow: rem(0px) rem(34px) rem(47px) rem(-21px) $black;
+    //0rem 2.125rem 2.9375rem -1.3125rem
+  }
+}
+
+.img {
+  max-width: 100%;
+}

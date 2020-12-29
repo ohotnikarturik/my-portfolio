@@ -28,7 +28,7 @@ SocialsItem.propTypes = {
   img: PropTypes.string,
   link: PropTypes.string,
   socialName: PropTypes.string,
-  whiteColor: PropTypes.string,
+  whiteColor: PropTypes.bool,
 };
 
 export default SocialsItem;

@@ -9,6 +9,7 @@ import SkillsSection from "../../sections/SkillsSection";
 import ContactsSection from "../../sections/ContactsSection";
 import ParallaxSection from "../../sections/ParallaxSection";
 import Footer from "../../Footer";
+import CertificatesSection from "../../sections/CertificatesSection";
 
 const MainPage = ({ state }) => {
   return (
@@ -18,10 +19,11 @@ const MainPage = ({ state }) => {
         <WorksSection state={state} />
         <SkillsSection state={state} />
         {/* <BlogsSection state={state} /> */}
+        <CertificatesSection state={state} />
         <ContactsSection state={state} />
         <ParallaxSection />
       </main>
-      <Footer state={state}/>
+      <Footer state={state} />
     </div>
   );
 };
