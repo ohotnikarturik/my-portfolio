@@ -11,7 +11,7 @@ import VisibilitySensor from "../../VisibilitySensor";
 const SkillsSection = ({ state }) => {
   return (
     <section id="Skills" className={`section ${style.skills}`} title="Skills">
-      <TriangleShape color="#f4f4f4" />
+      <TriangleShape styles={{fill: "#f4f4f4", top: 0}} />
       <div className={`container ${style.container}`}>
         <div className={style.title}>
           <SectionTitle title={"My Skills."} />

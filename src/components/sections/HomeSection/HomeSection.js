@@ -11,6 +11,7 @@ import SocialsItem from "../../SocialsItem";
 import ArrowDown from "../../ArrowDown";
 import Header from "../../Header";
 import VisibilitySensor from "../../VisibilitySensor";
+import TriangleShape from "../../TriangleShape";
 
 const HomeSection = ({ state }) => {
   const bgImageStyle = (src) => ({
@@ -45,8 +46,12 @@ const HomeSection = ({ state }) => {
                   </div>
                   <div className={style.desc}>
                     <div className={style.descText}>
-                      Code is my passion. I like to code everyday, create
-                      something new, meet new challenges and solve them. 
+                      Code is my passion. I love{" "}
+                      <svg className={style.heartImg}>
+                        <use href={sprite + "#heart"} />
+                      </svg>{" "}
+                      to code everyday. I like to create something new. Meet new
+                      challenges and solve them. 
                     </div>
                   </div>
                   <div className={style.linksContainer}>
@@ -85,6 +90,9 @@ const HomeSection = ({ state }) => {
           </Spring>
         )}
       </VisibilitySensor>
+      <TriangleShape
+        styles={{ bottom: "-1", transform: "rotate(180deg)", fill: "#f4f4f4" }}
+      />
     </section>
   );
 };

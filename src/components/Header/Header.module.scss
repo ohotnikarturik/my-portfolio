@@ -38,7 +38,6 @@
 .imgPic {
   max-width: 15%;
   border-radius: 50%;
-  background-color: $white;
   margin-right: rem(5px);
 
   @include phones {
@@ -51,7 +50,7 @@
 }
 
 .greeting {
-  background-color: $blue;
+  background-color: rgba($blue, 0.9);
   padding: rem(5px) rem(20px);
   border-radius: rem(20px) rem(20px) rem(20px) 0;
   display: block;

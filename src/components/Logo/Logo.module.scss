@@ -4,10 +4,10 @@
 ;
 .logo {
   background-color: $red;
-  padding: rem(5px) rem(20px);
+  padding: rem(2px) rem(20px);
   border-radius: rem(20px) 0 rem(20px) 0;
   display: inline-block;
-  width: rem(120px);
+  // width: rem(120px);
   text-align: center;
   cursor: pointer;
 }
@@ -20,7 +20,7 @@
 
 .text {
   color: $white;
-  font-size: rem(26px);
+  font-size: rem(22px);
   font-weight: bold;
   @include oswald(bold);
   letter-spacing: rem(2px);
@@ -33,7 +33,7 @@
 
 .text_color_red {
   color: $red;
-  font-size: rem(26px);
+  font-size: rem(22px);
   font-weight: bold;
   @include oswald(bold);
   letter-spacing: rem(2px);

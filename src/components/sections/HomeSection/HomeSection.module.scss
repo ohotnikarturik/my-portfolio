@@ -22,12 +22,28 @@
 .descContainer {
   margin-top: rem(140px);
   text-align: center;
-  background-color: rgba($white, 0.5);
-  border-radius: rem(5px);
+  background-color: rgba($white, 0.6);
+  border-radius: rem(10px);
   padding: rem(20px);
 
   @include tablets {
-    margin-top: rem(120px);
+    margin-top: rem(110px);
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    content: '';
+    display: inline-block;
+    width: rem(40px);
+    height: rem(40px);
+    border: rem(20px) solid rgba($white, 0.6);
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(45deg);
+    z-index: 1001;
   }
 }
 
@@ -42,6 +58,12 @@
 .descText {
   @include glacial();
   font-size: rem(18px);
+}
+
+.heartImg {
+  fill: $white;
+  width: rem(15px);
+  height: rem(15px);
 }
 
 .linksContainer {
@@ -77,7 +99,8 @@
 }
 
 .descContainer {
-  width: 60%;
+  width: 65%;
+  position: relative;
 
   @include tablets {
     width: 85%;

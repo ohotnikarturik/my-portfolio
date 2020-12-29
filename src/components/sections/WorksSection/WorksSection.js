@@ -4,14 +4,12 @@ import { Spring } from "react-spring/renderprops";
 
 import style from "./WorksSection.module.scss";
 import SectionTitle from "../../SectionTitle";
-import TriangleShape from "../../TriangleShape/";
 import VisibilitySensor from "../../VisibilitySensor/";
 import MyWorksSlider from "../../Carousel/";
 
 const WorksSection = ({state}) => {
   return (
     <section id="Works" className={`section ${style.works}`} title="Works">
-      <TriangleShape color="#fff" />
       <div className={`container ${style.container}`}>
         <div className={style.title}>
           <SectionTitle title={"My Works."} />
