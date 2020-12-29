@@ -43,12 +43,6 @@ const state = {
       img: "fb",
       link: "https://www.facebook.com/ohotnik.art/",
     },
-    {
-      id: 6,
-      ariaLabel: "Link to skype",
-      img: "sk",
-      link: "https://www.linkedin.com/in/artur-okhotnichenko-9104b9190/",
-    },
   ],
   works: [
     {

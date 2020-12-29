@@ -4,13 +4,15 @@
 
 .header {
   width: 100%;
-  height: rem(80px);
-  box-shadow: 0 0 rem(10px) rem(-7px) $black;
+  height: rem(100px);
+  
   position: absolute;
   z-index: 1001;
+  
 }
 
 .header_fixed {
+  height: rem(70px);
   @extend .header;
   position: fixed;
   background-color: rgba($white, 0.9);
@@ -26,10 +28,40 @@
 .container {
   display: flex;
   align-items: center;
+  width: 100%;
 
   @include tablets {
     padding: 0 rem(30px);
   }
+}
+
+.imgPic {
+  max-width: 15%;
+  border-radius: 50%;
+  background-color: $white;
+  margin-right: rem(5px);
+
+  @include phones {
+    max-width: 20%;
+  }
+}
+
+.greetingContainer {
+  @include flex(row, flex-start, flex-start)
+}
+
+.greeting {
+  background-color: $blue;
+  padding: rem(5px) rem(20px);
+  border-radius: rem(20px) rem(20px) rem(20px) 0;
+  display: block;
+  width: rem(140px);
+  text-align: center;
+}
+
+.greetingText {
+  color: $white;
+  font-size: rem(16px);
 }
 
 .nav {

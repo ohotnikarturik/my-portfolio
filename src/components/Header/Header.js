@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 import "../../scss/index.scss";
+import myImg from "../../assets/img/content/my-photo-535x535.png";
 import style from "./Header.module.scss";
 import Logo from "../Logo";
 import NavBarItem from "../NavBarItem";
@@ -77,8 +78,17 @@ const Header = ({ state, page }) => {
     <header className={isFixedHeader ? style.header_fixed : style.header}>
       <Progress />
       <div className={`container ${style.container}`}>
-        <div className={style.logo}>
-          <Logo />
+        <div className={style.logoContainer}>
+          {isFixedHeader ? (
+            <Logo />
+          ) : (
+            <div className={style.greetingContainer}>
+              <img className={style.imgPic} src={myImg} alt="developer" />
+              <div className={style.greeting}>
+                <span className={style.greetingText}>Hello, I&apos;m Artur</span>
+              </div>
+            </div>
+          )}
         </div>
         <div className={style.nav}>
           <ul className={style.list}>{setNavigation(page)}</ul>

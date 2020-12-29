@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { Spring } from "react-spring/renderprops";
 
-import myImg from "../../../assets/img/content/arturik-nofone.png";
+import backgroundImage from "../../../assets/img/bg/mountain.jpg";
 import sprite from "../../../assets/img/sprite.svg";
 import style from "./HomeSection.module.scss";
 import SectionTitle from "../../SectionTitle";
@@ -13,8 +13,17 @@ import Header from "../../Header";
 import VisibilitySensor from "../../VisibilitySensor";
 
 const HomeSection = ({ state }) => {
+  const bgImageStyle = (src) => ({
+    backgroundImage: `url(${src})`,
+  });
+
   return (
-    <section id="Home" className={style.home} title="Home">
+    <section
+      id="Home"
+      style={bgImageStyle(backgroundImage)}
+      className={style.home}
+      title="Home"
+    >
       <Header state={state} />
       <VisibilitySensor partialVisibility once>
         {({ isVisible }) => (
@@ -26,53 +35,47 @@ const HomeSection = ({ state }) => {
             {(props) => (
               <div style={props} className={`container ${style.container}`}>
                 <div className={style.descContainer}>
-                  <div className={style.descGreeting}>
-                    <span className={style.descGreetingText}>
-                      Hello, I&apos;m
-                    </span>
-                  </div>
-                  <div className={style.title}>
-                    <h1 className={style.titleName}>Artur.</h1>
-                  </div>
                   <div className={style.profession}>
                     <SectionTitle title={"Junior Full Stack Developer"} />
                   </div>
                   <div className={style.desc}>
-                    <h4 className={style.descTitle}>I can build web and mobile applications</h4>
+                    <h4 className={style.descText}>
+                      I can build web and mobile applications.
+                    </h4>
                   </div>
-                  <div className={style.markContainer}>
-                    <h4 className={style.markTitle}>Available for new works</h4>
-                    <svg className={style.markImg}>
-                      <use href={sprite + "#mark"} />
-                    </svg>
+                  <div className={style.desc}>
+                    <div className={style.descText}>
+                      Code is my passion. I like to code everyday, create
+                      something new, meet new challenges and solve them. 
+                    </div>
                   </div>
-                  <div className={style.myCvContainer}>
-                    <h4 className={style.myCvTitle}>My CV</h4>
-                    <Link
-                      to="/files/my-cv.pdf"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <svg className={style.openFileImg}>
-                        <use href={sprite + "#openPage"} />
-                      </svg>
-                    </Link>
+                  <div className={style.linksContainer}>
+                    <div className={style.myCvContainer}>
+                      <NavLink
+                        className={style.link}
+                        to="/files/my-cv.pdf"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <div className={style.myCvTitle}>My CV</div>
+                        <svg className={style.openFileImg}>
+                          <use href={sprite + "#openPage"} />
+                        </svg>
+                      </NavLink>
+                    </div>
+                    <div className={style.socials}>
+                      <ul className={style.list}>
+                        {state.socials.map((item) => (
+                          <SocialsItem
+                            key={item.id}
+                            ariaLabel={item.ariaLabel}
+                            img={item.img}
+                            link={item.link}
+                          />
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <div className={style.socials}>
-                    <ul className={style.list}>
-                      {state.socials.map((item) => (
-                        <SocialsItem
-                          key={item.id}
-                          ariaLabel={item.ariaLabel}
-                          img={item.img}
-                          link={item.link}
-                        />
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className={style.img}>
-                  <img className={style.imgPic} src={myImg} alt="developer" />
                 </div>
                 <div className={style.arrowDown}>
                   <ArrowDown />

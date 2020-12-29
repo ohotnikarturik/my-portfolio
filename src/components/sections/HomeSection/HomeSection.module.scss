@@ -5,101 +5,53 @@
 .home {
   background-color: $white;
   position: relative;
-  //background-attachment: fixed;
-  //background-position: 50%;
-  //background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
   min-height: rem(650px);
   overflow: hidden;
 }
 
 .container {
-  @include flex();
+  @include flex(column, flex-start);
   width: 100%;
+}
+
+.descContainer {
+  margin-top: rem(140px);
+  text-align: center;
+  background-color: rgba($white, 0.5);
+  border-radius: rem(5px);
+  padding: rem(20px);
 
   @include tablets {
-    @include flex(column, space-evenly);
-    padding-top: rem(80px) !important;
+    margin-top: rem(120px);
   }
-}
-
-.descGreeting {
-  background-color: $blue;
-  padding: rem(5px) rem(20px);
-  border-radius: rem(20px) rem(20px) rem(20px) 0;
-  display: block;
-  width: rem(120px);
-  text-align: center;
-  margin-bottom: rem(10px);
-}
-
-.descGreetingText {
-  color: $white;
-  font-size: rem(16px);
-}
-
-.titleName {
-  font-size: rem(45px);
-  @include glacial(bold);
 }
 
 .profession {
   margin-bottom: rem(10px);
-  
-  @include phones {
-    text-align: center;
-  }
 }
 
 .desc {
   margin-bottom: rem(10px);
 }
 
-.descTitle {
+.descText {
   @include glacial();
   font-size: rem(18px);
 }
 
-.markContainer {
+.linksContainer {
+  @include flex(row, space-between, center);
+}
+
+.link {
   display: flex;
   align-items: center;
-  margin-bottom: rem(10px);
-}
-
-.markImg {
-  fill: $red;
-  margin-left: rem(10px);
-  width: rem(20px);
-  height: rem(20px);
-}
-
-.markTitle {
-  @include glacial();
-  font-size: rem(18px);
-}
-
-.descContainer {
-  @include tablets {
-    @include flex(column);
-  }
-}
-
-.myCvContainer {
-  display: flex;
-  align-items: center;
-  margin-bottom: rem(50px);
-}
-
-.myCvTitle {
-  @include glacial();
-  font-size: rem(18px);
-}
-
-.openFileImg {
-  margin-left: rem(10px);
-  width: rem(22px);
-  height: rem(25px);
-  fill: $blue;
+  justify-content: flex-start;
   transition: all .3s;
 
   &:hover {
@@ -108,37 +60,31 @@
   }
 }
 
+.myCvTitle {
+  @include glacial(bold);
+  margin-right: rem(10px);
+  color: $blue;
+}
+
+.openFileImg {
+  width: rem(20px);
+  height: rem(20px);
+  fill: $blue;
+}
+
 .list {
   display: flex;
 }
 
-.descContainer, .img {
-  width: 50%;
+.descContainer {
+  width: 60%;
 
   @include tablets {
-    width: 100%;
-  }
-}
-
-.img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @include tablets {
-    margin-bottom: rem(60px);
-  }
-}
-
-.imgPic {
-  max-width: 70%;
-
-  @include tablets {
-    width: 40%;
+    width: 85%;
   }
 
   @include phones {
-    width: 60%;
+    width: 100%;
   }
 }
 
