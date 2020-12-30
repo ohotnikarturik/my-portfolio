@@ -10,7 +10,6 @@ import NavBarItem from "../NavBarItem";
 import HamburgerMenu from "../HamburgerMenu";
 import Progress from "../Progress";
 import OverlayNav from "../OverlayNav";
-// import ThemeMode from "../ThemeMode";
 
 const Header = ({ state, page }) => {
   const [isFixedHeader, setIsFixedHeader] = useState(false);
@@ -84,8 +83,11 @@ const Header = ({ state, page }) => {
           ) : (
             <div className={style.greetingContainer}>
               <img className={style.imgPic} src={myImg} alt="developer" />
+
               <div className={style.greeting}>
-                <span className={style.greetingText}>Hello, I&apos;m Artur</span>
+                <span className={style.greetingText}>
+                  Hello, I&apos;m Artur
+                </span>
               </div>
             </div>
           )}
@@ -94,7 +96,6 @@ const Header = ({ state, page }) => {
           <ul className={style.list}>{setNavigation(page)}</ul>
           <HamburgerMenu onClick={showOverlayNav} />
         </div>
-        <div className={style.themeMode}>{/*<ThemeMode />*/}</div>
       </div>
     </header>
   );

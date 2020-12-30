@@ -14,7 +14,7 @@
 
 .overlayHeader {
   @include flex(row, space-between);
-  height: rem(80px);
+  height: rem(70px);
   display: flex;
   align-items: center;
 }
