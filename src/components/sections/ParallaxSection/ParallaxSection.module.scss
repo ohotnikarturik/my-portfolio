@@ -3,19 +3,17 @@
 @import "../../../scss/config/variables";
 
 .parallax {
-  background-image: url("../../../assets/img/bg/ct.svg");
   background-color: $light-gray;
   height: rem(630px);
   width: 100%;
   background-attachment: fixed;
   background-position: 50%;
   background-repeat: no-repeat;
-  //background-size: cover;
+  background-size: cover;
+  position: relative;
 
   @include tablets {
-    display: none;
-  }
-  @include phones {
-    display: none;
+    background-position: center;
+    background-attachment: unset;
   }
 }

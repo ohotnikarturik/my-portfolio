@@ -4,7 +4,6 @@ import { Spring } from "react-spring/renderprops";
 
 import style from "./ContactsSection.module.scss";
 import SectionTitle from "../../SectionTitle";
-import WaveShape from "../../WaveShape";
 import SendEmail from "../../SendEmail";
 import VisibilitySensor from "../../VisibilitySensor";
 import sprite from "../../../assets/img/sprite.svg";
@@ -16,7 +15,6 @@ const ContactsSection = () => {
       className={`section ${style.contacts}`}
       title="Contacts"
     >
-      <WaveShape color="#f4f4f4" />
       <div className={`container ${style.container}`}>
         <div className={style.title}>
           <SectionTitle title={"Contact."} />

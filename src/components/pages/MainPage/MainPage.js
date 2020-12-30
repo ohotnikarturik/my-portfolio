@@ -18,10 +18,10 @@ const MainPage = ({ state }) => {
         <HomeSection state={state} />
         <WorksSection state={state} />
         <SkillsSection state={state} />
-        {/* <BlogsSection state={state} /> */}
+        <ParallaxSection middlSectionImg state={state}/>
         <CertificatesSection state={state} />
         <ContactsSection state={state} />
-        <ParallaxSection />
+        <ParallaxSection state={state}/>
       </main>
       <Footer state={state} />
     </div>

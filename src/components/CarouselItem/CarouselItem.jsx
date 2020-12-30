@@ -6,8 +6,8 @@ import SectionSubtitle from "../SectionSubtitle";
 import SocialsItem from "../SocialsItem";
 
 const CarouselItem = ({ img, subtitle, descText1, descText2, socials }) => {
-  const imageStyle = (src) => ({
-    backgroundImage: `url(${src})`,
+  const imageStyle = (i) => ({
+    backgroundImage: `url(${i})`,
   });
 
   return (

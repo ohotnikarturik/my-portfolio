@@ -4,16 +4,16 @@ import PropTypes from "prop-types";
 import style from "./WaveShape.module.scss";
 import sprite from "../../assets/img/sprite.svg";
 
-const WaveShape = ({ color }) => {
+const WaveShape = ({ styles }) => {
   return (
-    <svg className={style.wave} style={{fill: `${color}`}}>
+    <svg className={style.wave} style={{...styles}}>
       <use href={sprite + "#wave"} />
     </svg>
   );
 };
 
 WaveShape.propTypes = {
-  color: PropTypes.string,
+  styles: PropTypes.object,
 };
 
 export default WaveShape;

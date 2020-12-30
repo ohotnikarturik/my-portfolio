@@ -4,14 +4,12 @@ import { Spring } from "react-spring/renderprops";
 
 import style from "./CertificatesSection.module.scss";
 import SectionTitle from "../../SectionTitle";
-import WaveShape from "../../WaveShape";
 import VisibilitySensor from "../../VisibilitySensor";
 import CertificateItem from "../../CertificateItem/CertificateItem";
 
 const Certificates = ({state}) => {
   return (
     <section id="Certifications" className={`section ${style.certificates}`} title="Certificates">
-      <WaveShape />
       <div className={`container ${style.container}`}>
         <div className={style.title}>
           <SectionTitle title={"My Certifications."} />

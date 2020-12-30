@@ -12,6 +12,9 @@ import certificateImg2 from "../assets/img/content/myCertificates/cert1.jpg";
 import certificateImg3 from "../assets/img/content/myCertificates/cert3.jpg";
 import certificateImg4 from "../assets/img/content/myCertificates/cert4.jpg";
 
+import parallaxSectionImg1 from "../assets/img/bg/landskape.jpg"
+import parallaxSectionImg2 from "../assets/img/bg/mountain2.jpg"
+
 const state = {
   navHome: [
     { id: 1, name: "Home" },
@@ -412,6 +415,10 @@ const state = {
     { id: 3, img: certificateImg3 },
     { id: 4, img: certificateImg4 },
   ],
+  parallaxSectionImg: [
+    {id: 1, img: parallaxSectionImg1},
+    {id: 2, img: parallaxSectionImg2},
+  ]
 };
 
 export default state;
