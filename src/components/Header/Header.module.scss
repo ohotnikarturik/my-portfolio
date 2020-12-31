@@ -32,6 +32,10 @@
 
   @include tablets {
     padding: 0 rem(30px);
+    padding-top: rem(10px);
+  }
+  @include phones {
+    padding-top: rem(0px);
   }
 }
 

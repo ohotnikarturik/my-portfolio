@@ -8,8 +8,8 @@
   height: 100vh !important;
   padding-bottom: rem(80px);
 
-  @include phones {
-    height: 110vh !important;
+  @include tablets {
+    height: 125vh !important;
   }
 }
 
