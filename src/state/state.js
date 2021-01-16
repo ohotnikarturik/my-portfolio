@@ -299,7 +299,7 @@ const state = {
       subtitle: "Node.js",
       ariaLabel: "Link-button to view skill",
       href: "https://nodejs.org/en/",
-      completed: 40,
+      completed: 50,
     },
     {
       id: 11,
@@ -307,7 +307,7 @@ const state = {
       subtitle: "Express.js",
       ariaLabel: "Link-button to view skill",
       href: "https://expressjs.com/",
-      completed: 40,
+      completed: 60,
     },
     {
       id: 12,
@@ -315,7 +315,7 @@ const state = {
       subtitle: "MongoDB",
       ariaLabel: "Link-button to view skill",
       href: "https://www.mongodb.com/",
-      completed: 50,
+      completed: 60,
     },
     {
       id: 13,
@@ -323,7 +323,7 @@ const state = {
       subtitle: "Rest API",
       ariaLabel: "Link-button to view skill",
       href: "https://www.restapitutorial.com/",
-      completed: 40,
+      completed: 60,
     },
     {
       id: 14,
@@ -331,12 +331,12 @@ const state = {
       subtitle: "GraphQL",
       ariaLabel: "Link-button to view skill",
       href: "https://graphql.org/",
-      completed: 40,
+      completed: 50,
     },
     {
       id: 15,
       img: "aws",
-      subtitle: "AWS Amplify",
+      subtitle: "AWS",
       ariaLabel: "Link-button to view skill",
       href: "https://aws.amazon.com/amplify/",
       completed: 50,
