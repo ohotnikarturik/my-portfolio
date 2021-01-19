@@ -12,13 +12,13 @@ import certificateImg2 from "../assets/img/content/myCertificates/cert1.jpg";
 import certificateImg3 from "../assets/img/content/myCertificates/cert3.jpg";
 import certificateImg4 from "../assets/img/content/myCertificates/cert4.jpg";
 
-import parallaxSectionImg1 from "../assets/img/bg/landskape.jpg"
-import parallaxSectionImg2 from "../assets/img/bg/mountain2.jpg"
+import parallaxSectionImg1 from "../assets/img/bg/landskape.jpg";
+import parallaxSectionImg2 from "../assets/img/bg/mountain2.jpg";
 
 const state = {
   navHome: [
     { id: 1, name: "Home" },
-    { id: 2, name: "Works" },
+    { id: 2, name: "Work" },
     { id: 3, name: "Skills" },
     { id: 4, name: "Certifications" },
     { id: 5, name: "Contact" },
@@ -53,7 +53,7 @@ const state = {
       id: 1,
       subtitle: "My Cloud Storage",
       descText1:
-        "My Cloud Storage' is a full stack app. The app's goal, secure to store and retrieve of clients data. 'My Cloud Storage' app is now in development mode. For now app has Authentication features: Sign Up , Sign In, Forgot Password and Change Password.",
+        "My Cloud Storage is a full-stack app. The app's goal is to store, secure, and retrieve client's data. My Cloud Storage app is currently in development mode. At the moment the app has the following authentication features: Sign Up, Sign In, Forgot Password, and Change Password.",
       descText2: "CSS, MaterializeCSS, JavaScript, React.js, Redux, AWS",
       socials: [
         {
@@ -77,7 +77,7 @@ const state = {
     //   id: 2,
     //   subtitle: "Yard",
     //   descText1:
-    //     "A teamwork project. Mobile app to book, check in and plan a trip to Helsinki. The app includes all the essential information and services for the traveler.",
+    //     "Private repository. A teamwork project. Mobile app to book, check in and plan a trip to Helsinki. The app includes all the essential information and services for the traveler.",
     //   descText2:
     //     "React Native, JavaScript, Expo, Native Base, TypeScript, Redux, Contentful CMS and AWS",
     //   socials: [
@@ -102,7 +102,7 @@ const state = {
       id: 3,
       subtitle: "My Portfolio",
       descText1:
-        "My Portfolio is animated, scrollable and fully responsive, a web app, which I am proud of. My Works. My skills which I achieved. My certifications and Contact section, where you can email me.",
+        "My Portfolio is an animated, scrollable, and fully responsive web app, which showcases my professional work as a junior full-stack developer. The app features my work, my skills, my certifications, and a contact section if you'd like to get in touch with me.",
       descText2: "CSS, SASS, JavaScript, React.js, EmailJS",
       socials: [
         {
@@ -126,7 +126,7 @@ const state = {
       id: 4,
       subtitle: "Terveet Tavat",
       descText1:
-        "A teamwork project. This is a responsive web app with blog functionality. My role was to create the UI design, styling in the responsiveness, animation as well as building components and working on some of the functionalities.",
+        "A group project. This is a responsive web app with a blog section. My role was to create the UI Design, styling, making the app responsive, creating animations as well as building components, and working on some of the functionalities.",
       descText2: "CSS, Contentful, JavaScript, React.js, Gatsby.js, MailShip",
       socials: [
         {
@@ -150,8 +150,9 @@ const state = {
       id: 5,
       subtitle: "Product countries",
       descText1:
-        "This app has a small part of an E-Commerce web application. Get a list of products by fetching data from API. Filter and sort list. Add/remove product/s to from the basket. Switch color theme.",
-      descText2: "CSS, Materialize CSS, React.js, JavaScript, Redux",
+        "Private repository. This app has a small part on an E-Commerce web application. You can get a list of products by fetching data from an API, filter and sort list, and add/remove products to and from a basket. The app has a theme color switch functionality.",
+      descText2:
+        "CSS, Materialize CSS, React.js, JavaScript, TypeScript, Redux and Docker",
       socials: [
         {
           id: 1,
@@ -199,7 +200,7 @@ const state = {
     {
       id: 7,
       subtitle: "Mika Rekilae",
-      descText1: "Stattic Web site for Cow farmer",
+      descText1: "Static Web site for Cow farmer",
       descText2: "HTML, CSS, BEM, JavaScript, JQuery",
       socials: [
         {
@@ -416,9 +417,9 @@ const state = {
     { id: 4, img: certificateImg4 },
   ],
   parallaxSectionImg: [
-    {id: 1, img: parallaxSectionImg1},
-    {id: 2, img: parallaxSectionImg2},
-  ]
+    { id: 1, img: parallaxSectionImg1 },
+    { id: 2, img: parallaxSectionImg2 },
+  ],
 };
 
 export default state;

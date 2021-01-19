@@ -9,10 +9,10 @@ import MyWorksSlider from "../../Carousel/";
 
 const WorksSection = ({state}) => {
   return (
-    <section id="Works" className={`section ${style.works}`} title="Works">
+    <section id="Work" className={`section ${style.works}`} title="Works">
       <div className={`container ${style.container}`}>
         <div className={style.title}>
-          <SectionTitle title={"My Works."} />
+          <SectionTitle title={"My Work."} />
         </div>
         <VisibilitySensor partialVisibility once offset={{ bottom: -400 }}>
           {({ isVisible }) => (

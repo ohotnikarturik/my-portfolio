@@ -27,7 +27,7 @@
 .descContainer {
   margin-top: rem(140px);
   text-align: center;
-  background-color: rgba($white, 0.6);
+  background-color: rgba($white, 0.5);
   border-radius: rem(10px);
   padding: rem(20px);
 
@@ -44,7 +44,7 @@
     display: inline-block;
     width: rem(40px);
     height: rem(40px);
-    border: rem(20px) solid rgba($white, 0.6);
+    border: rem(20px) solid rgba($white, 0.5);
     border-top-color: transparent;
     border-left-color: transparent;
     transform: rotate(45deg);
