@@ -83,7 +83,6 @@ const Header = ({ state, page }) => {
           ) : (
             <div className={style.greetingContainer}>
               <img className={style.imgPic} src={myImg} alt="developer" />
-
               <div className={style.greeting}>
                 <span className={style.greetingText}>
                   Hello, I&apos;m Artur

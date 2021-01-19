@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import { Spring } from "react-spring/renderprops";
 
-import backgroundImage from "../../../assets/img/bg/mountain.jpg";
+import backgroundImage from "../../../assets/img/bg/mountain1.jpg";
 import sprite from "../../../assets/img/sprite.svg";
 import style from "./HomeSection.module.scss";
 import SectionTitle from "../../SectionTitle";
