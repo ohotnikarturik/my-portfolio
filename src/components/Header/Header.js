@@ -85,7 +85,7 @@ const Header = ({ state, page }) => {
               <img className={style.imgPic} src={myImg} alt="developer" />
               <div className={style.greeting}>
                 <span className={style.greetingText}>
-                  Hello, I&apos;m Artur
+                  Hi, I&apos;m Artur
                 </span>
               </div>
             </div>

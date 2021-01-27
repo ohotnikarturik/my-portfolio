@@ -1,19 +1,20 @@
 //my works images
-import work1 from "../assets/img/content/myWorks/work-1.jpg";
+import work0 from "../assets/img/content/myWorks/work-0.jpg"
+import work1 from "../assets/img/content/myWorks/work-1.jpg"
 // import work2 from "../assets/img/content/myWorks/work-2.jpg";
-import work3 from "../assets/img/content/myWorks/work-3.jpg";
-import work4 from "../assets/img/content/myWorks/work-4.jpg";
-import work5 from "../assets/img/content/myWorks/work-5.jpg";
-import work6 from "../assets/img/content/myWorks/work-6.jpg";
-import work7 from "../assets/img/content/myWorks/work-7.jpg";
+import work3 from "../assets/img/content/myWorks/work-3.jpg"
+import work4 from "../assets/img/content/myWorks/work-4.jpg"
+import work5 from "../assets/img/content/myWorks/work-5.jpg"
+import work6 from "../assets/img/content/myWorks/work-6.jpg"
+import work7 from "../assets/img/content/myWorks/work-7.jpg"
 
-import certificateImg1 from "../assets/img/content/myCertificates/cert2.jpg";
-import certificateImg2 from "../assets/img/content/myCertificates/cert1.jpg";
-import certificateImg3 from "../assets/img/content/myCertificates/cert3.jpg";
-import certificateImg4 from "../assets/img/content/myCertificates/cert4.jpg";
+import certificateImg1 from "../assets/img/content/myCertificates/cert2.jpg"
+import certificateImg2 from "../assets/img/content/myCertificates/cert1.jpg"
+import certificateImg3 from "../assets/img/content/myCertificates/cert3.jpg"
+import certificateImg4 from "../assets/img/content/myCertificates/cert4.jpg"
 
-import parallaxSectionImg1 from "../assets/img/bg/landskape.jpg";
-import parallaxSectionImg2 from "../assets/img/bg/mountain2.jpg";
+import parallaxSectionImg1 from "../assets/img/bg/landskape.jpg"
+import parallaxSectionImg2 from "../assets/img/bg/mountain2.jpg"
 
 const state = {
   navHome: [
@@ -49,6 +50,31 @@ const state = {
     },
   ],
   works: [
+    {
+      id: 0,
+      subtitle: "Task-Manager API",
+      descText1:
+        "A Representational State Transfer API for managing all user tasks. Has full fledged support for user login and sign up. Filter and sort user tasks with pagination. Upload image avatar, and a lot more features accessible with just some simple requests.",
+      descText2:
+        "Node.js, Express.js, MongoDB, Mongoose, REST API and Nodemailer/SendGrid",
+      socials: [
+        {
+          id: 1,
+          ariaLabel: "Link to github",
+          img: "git",
+          link: "https://github.com/ohotnikarturik/task-manager-api",
+          socialName: "GitHub ",
+        },
+        {
+          id: 2,
+          ariaLabel: "Link to website",
+          img: "openPage",
+          link: "https://ohotnikarturik-task-manager.herokuapp.com/",
+          socialName: "Demo",
+        },
+      ],
+      img: work0,
+    },
     {
       id: 1,
       subtitle: "My Cloud Storage",
@@ -420,6 +446,6 @@ const state = {
     { id: 1, img: parallaxSectionImg1 },
     { id: 2, img: parallaxSectionImg2 },
   ],
-};
+}
 
-export default state;
+export default state

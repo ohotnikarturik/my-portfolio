@@ -30,13 +30,6 @@ const ParallaxSection = ({ state, middlSectionImg }) => {
       ) : (
         <>
           <TriangleShape styles={{ top: "-2" }} />
-          <TriangleShape
-            styles={{
-              bottom: "-2",
-              transform: "rotate(180deg)",
-              fill: "#2f2e41",
-            }}
-          />
         </>
       )}
     </section>
