@@ -80,7 +80,7 @@ const state = {
       subtitle: "My Cloud Storage",
       descText1:
         "My Cloud Storage is a full-stack app. The app's goal is to store, secure, and retrieve client's data. My Cloud Storage app is currently in development mode. At the moment the app has the following authentication features: Sign Up, Sign In, Forgot Password, and Change Password.",
-      descText2: "CSS, MaterializeCSS, JavaScript, React.js, Redux, AWS",
+      descText2: "CSS, MaterializeCSS, JavaScript, React.js, Redux and AWS",
       socials: [
         {
           id: 1,
@@ -129,7 +129,7 @@ const state = {
       subtitle: "My Portfolio",
       descText1:
         "My Portfolio is an animated, scrollable, and fully responsive web app, which showcases my professional work as a junior full-stack developer. The app features my work, my skills, my certifications, and a contact section if you'd like to get in touch with me.",
-      descText2: "CSS, SASS, JavaScript, React.js, EmailJS",
+      descText2: "CSS, SASS, JavaScript, React.js and EmailJS",
       socials: [
         {
           id: 1,
@@ -174,7 +174,7 @@ const state = {
     },
     {
       id: 5,
-      subtitle: "Product countries",
+      subtitle: "Productcountries",
       descText1:
         "Private repository. This app has a small part on an E-Commerce web application. You can get a list of products by fetching data from an API, filter and sort list, and add/remove products to and from a basket. The app has a theme color switch functionality.",
       descText2:
@@ -375,6 +375,14 @@ const state = {
       ariaLabel: "Link-button to view skill",
       href: "https://www.contentful.com/",
       completed: 60,
+    },
+    {
+      id: 17,
+      img: "jest",
+      subtitle: "Jest",
+      ariaLabel: "Link-button to view skill",
+      href: "https://jestjs.io/",
+      completed:50,
     },
   ],
   blogs: [
