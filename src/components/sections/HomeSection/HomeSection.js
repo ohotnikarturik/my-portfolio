@@ -51,7 +51,7 @@ const HomeSection = ({ state }) => {
                     <svg className={style.heartImg}>
                       <use href={sprite + "#heart"} />
                     </svg>{" "}
-                    to code everyday. I like to create something new all the
+                    to code every day. I like to create something new all the
                     time. Meet new challenges and solve them. 
                   </div>
                 </div>

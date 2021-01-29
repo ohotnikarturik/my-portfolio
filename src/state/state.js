@@ -1,7 +1,7 @@
 //my works images
 import work0 from "../assets/img/content/myWorks/work-0.jpg"
 import work1 from "../assets/img/content/myWorks/work-1.jpg"
-// import work2 from "../assets/img/content/myWorks/work-2.jpg";
+import work2 from "../assets/img/content/myWorks/work-2.jpg";
 import work3 from "../assets/img/content/myWorks/work-3.jpg"
 import work4 from "../assets/img/content/myWorks/work-4.jpg"
 import work5 from "../assets/img/content/myWorks/work-5.jpg"
@@ -99,31 +99,31 @@ const state = {
       ],
       img: work1,
     },
-    // {
-    //   id: 2,
-    //   subtitle: "Yard",
-    //   descText1:
-    //     "Private repository. A teamwork project. Mobile app to book, check in and plan a trip to Helsinki. The app includes all the essential information and services for the traveler.",
-    //   descText2:
-    //     "React Native, JavaScript, Expo, Native Base, TypeScript, Redux, Contentful CMS and AWS",
-    //   socials: [
-    //     {
-    //       id: 1,
-    //       ariaLabel: "Link to github",
-    //       img: "git",
-    //       link: "https://github.com/ohotnikarturik/yard-app",
-    //       socialName: "GitHub ",
-    //     },
-    //     {
-    //       id: 2,
-    //       ariaLabel: "Link to website",
-    //       img: "openPage",
-    //       link: "https://www.apple.com/app-store/",
-    //       socialName: "Demo",
-    //     },
-    //   ],
-    //   img: work2,
-    // },
+    {
+      id: 2,
+      subtitle: "Yard",
+      descText1:
+        "Yard app a teamwork project. Mobile app to book, check in and plan a trip to Helsinki. The app includes all the essential information and services for the traveler. The app on deployment stage. Private repository. ",
+      descText2:
+        "React Native, JavaScript, Expo, Native Base, TypeScript, Redux, Contentful CMS and AWS",
+      socials: [
+        {
+          id: 1,
+          ariaLabel: "Link to github",
+          img: "git",
+          link: "https://github.com/",
+          socialName: "GitHub ",
+        },
+        {
+          id: 2,
+          ariaLabel: "Link to website",
+          img: "openPage",
+          link: "https://www.apple.com/app-store/",
+          socialName: "Demo",
+        },
+      ],
+      img: work2,
+    },
     {
       id: 3,
       subtitle: "My Portfolio",
