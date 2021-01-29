@@ -174,9 +174,9 @@ const state = {
     },
     {
       id: 5,
-      subtitle: "Productcountries",
+      subtitle: "Products-country",
       descText1:
-        "Private repository. This app has a small part on an E-Commerce web application. You can get a list of products by fetching data from an API, filter and sort list, and add/remove products to and from a basket. The app has a theme color switch functionality.",
+        "Products-country app has a small part of an E-Commerce web application. You can get a list of products by fetching data from an API, filter and sort list, and add/remove products to and from a basket. The app has a theme color switch functionality.",
       descText2:
         "CSS, Materialize CSS, React.js, JavaScript, TypeScript, Redux and Docker",
       socials: [
@@ -185,7 +185,7 @@ const state = {
           ariaLabel: "Link to github",
           img: "git",
           link:
-            "https://github.com/ohotnikarturik/full-stack-4-typescript-redux-template/tree/react-redux-ts-artur-newversion",
+            "https://github.com/ohotnikarturik/poroducts-country",
           socialName: "GitHub ",
         },
         {
