@@ -1,12 +1,13 @@
-import React from "react";
+import React from "react"
 // import PropTypes from "prop-types";
-import { Spring } from "react-spring/renderprops";
+import { Spring } from "react-spring/renderprops"
 
-import style from "./ContactsSection.module.scss";
-import SectionTitle from "../../SectionTitle";
-import SendEmail from "../../SendEmail";
-import VisibilitySensor from "../../VisibilitySensor";
-import sprite from "../../../assets/img/sprite.svg";
+import style from "./ContactsSection.module.scss"
+import SectionTitle from "../../SectionTitle"
+import SendEmail from "../../SendEmail"
+import VisibilitySensor from "../../VisibilitySensor"
+import sprite from "../../../assets/img/sprite.svg"
+import TriangleShape from "../../TriangleShape"
 
 const ContactsSection = () => {
   return (
@@ -31,7 +32,7 @@ const ContactsSection = () => {
               {(props) => (
                 <div style={props} className={style.content}>
                   <div className={style.contentImageContainer}>
-                    <svg className={style.contentImage }>
+                    <svg className={style.contentImage}>
                       <use href={`${sprite}#delivery`} />
                     </svg>
                   </div>
@@ -44,12 +45,18 @@ const ContactsSection = () => {
           )}
         </VisibilitySensor>
       </div>
+      <TriangleShape
+        styles={{
+          top: "-2",
+          fill: "#f4f4f4",
+        }}
+      />
     </section>
-  );
-};
+  )
+}
 
 // ContactsSection.propTypes = {
 //   state: PropTypes.object.isRequired,
 // };
 
-export default ContactsSection;
+export default ContactsSection

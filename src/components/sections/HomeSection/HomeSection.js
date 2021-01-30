@@ -10,7 +10,6 @@ import SectionTitle from "../../SectionTitle";
 import SocialsItem from "../../SocialsItem";
 import ArrowDown from "../../ArrowDown";
 import Header from "../../Header";
-import TriangleShape from "../../TriangleShape";
 
 const HomeSection = ({ state }) => {
   const bgImageStyle = (src) => ({
@@ -87,13 +86,6 @@ const HomeSection = ({ state }) => {
                 <ArrowDown />
               </div>
             </div>
-            <TriangleShape
-              styles={{
-                bottom: "-1",
-                transform: "rotate(180deg)",
-                fill: "#f4f4f4",
-              }}
-            />
           </section>
         </div>
       )}

@@ -18,18 +18,11 @@ const ParallaxSection = ({ state, middlSectionImg }) => {
     >
       {middlSectionImg ? (
         <>
-          <WaveShape styles={{ top: "-2" }} />
-          <WaveShape
-            styles={{
-              bottom: "-2",
-              transform: "rotate(180deg)",
-              fill: "#f4f4f4",
-            }}
-          />
+          <WaveShape styles={{ top: "-3" }} />
         </>
       ) : (
         <>
-          <TriangleShape styles={{ top: "-2" }} />
+          <TriangleShape styles={{ top: "-3" }} />
         </>
       )}
     </section>
