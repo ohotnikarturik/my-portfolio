@@ -7,7 +7,7 @@ import sprite from "../../assets/img/sprite.svg";
 const ArrowDown = () => {
   return (
     <Link
-      to={"Works"}
+      to={"Work"}
       smooth={true}
       duration={500}
       className={style.arrowDownLink}
