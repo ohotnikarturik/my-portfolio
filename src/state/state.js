@@ -1,12 +1,13 @@
 //my works images
 import work0 from "../assets/img/content/myWorks/work-0.jpg"
 import work1 from "../assets/img/content/myWorks/work-1.jpg"
-import work2 from "../assets/img/content/myWorks/work-2.jpg";
+import work2 from "../assets/img/content/myWorks/work-2.jpg"
 import work3 from "../assets/img/content/myWorks/work-3.jpg"
 import work4 from "../assets/img/content/myWorks/work-4.jpg"
 import work5 from "../assets/img/content/myWorks/work-5.jpg"
 import work6 from "../assets/img/content/myWorks/work-6.jpg"
 import work7 from "../assets/img/content/myWorks/work-7.jpg"
+import work8 from "../assets/img/content/myWorks/work-8.jpg"
 
 import certificateImg1 from "../assets/img/content/myCertificates/cert2.jpg"
 import certificateImg2 from "../assets/img/content/myCertificates/cert1.jpg"
@@ -50,6 +51,31 @@ const state = {
     },
   ],
   works: [
+    {
+      id: 8,
+      subtitle: "ProBlog",
+      descText1:
+        "ProBlog is PWA(Progressive Web Application), where you can find and read posts on the most popular topics. In ProBlog app Contentful CMS helps to manage the app's content. The App has a fully responsive layout. Private repository",
+      descText2:
+        "Next.js, TypeScript, Tailwind CSS, Contentful CMS, Firebase and PWA.",
+      socials: [
+        {
+          id: 1,
+          ariaLabel: "Link to github",
+          img: "git",
+          link: "https://github.com/",
+          socialName: "GitHub ",
+        },
+        {
+          id: 2,
+          ariaLabel: "Link to website",
+          img: "openPage",
+          link: "https://pro-blog.vercel.app/",
+          socialName: "Demo",
+        },
+      ],
+      img: work8,
+    },
     {
       id: 0,
       subtitle: "Task-Manager API",
@@ -184,8 +210,7 @@ const state = {
           id: 1,
           ariaLabel: "Link to github",
           img: "git",
-          link:
-            "https://github.com/ohotnikarturik/poroducts-country",
+          link: "https://github.com/ohotnikarturik/poroducts-country",
           socialName: "GitHub ",
         },
         {
@@ -382,7 +407,15 @@ const state = {
       subtitle: "Jest",
       ariaLabel: "Link-button to view skill",
       href: "https://jestjs.io/",
-      completed:50,
+      completed: 50,
+    },
+    {
+      id: 17,
+      img: "next",
+      subtitle: "Next.js",
+      ariaLabel: "Link-button to view skill",
+      href: "https://nextjs.org/",
+      completed: 70,
     },
   ],
   blogs: [

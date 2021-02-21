@@ -1,22 +1,24 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Spring } from "react-spring/renderprops";
+import React from "react"
+import PropTypes from "prop-types"
+import { Spring } from "react-spring/renderprops"
 
-import style from "./SkillsSection.module.scss";
-import SectionTitle from "../../SectionTitle";
-import SkillsItem from "../../SkillsItem";
-import TriangleShape from "../../TriangleShape";
-import VisibilitySensor from "../../VisibilitySensor";
+import style from "./SkillsSection.module.scss"
+import SectionTitle from "../../SectionTitle"
+import SkillsItem from "../../SkillsItem"
+import TriangleShape from "../../TriangleShape"
+import VisibilitySensor from "../../VisibilitySensor"
 
 const SkillsSection = ({ state }) => {
+  console.log(state.skills)
+
   return (
     <section id="Skills" className={`section ${style.skills}`} title="Skills">
-      <TriangleShape styles={{fill: "#f4f4f4", top: 0}} />
+      <TriangleShape styles={{ fill: "#f4f4f4", top: 0 }} />
       <div className={`container ${style.container}`}>
         <div className={style.title}>
           <SectionTitle title={"My Skills."} />
         </div>
-        <VisibilitySensor partialVisibility once >
+        <VisibilitySensor partialVisibility once>
           {({ isVisible }) => (
             <Spring
               delay={300}
@@ -46,11 +48,11 @@ const SkillsSection = ({ state }) => {
         </VisibilitySensor>
       </div>
     </section>
-  );
-};
+  )
+}
 
 SkillsSection.propTypes = {
   state: PropTypes.object.isRequired,
-};
+}
 
-export default SkillsSection;
+export default SkillsSection
