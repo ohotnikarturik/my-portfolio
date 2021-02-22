@@ -55,7 +55,7 @@ const state = {
       id: 8,
       subtitle: "ProBlog",
       descText1:
-        "ProBlog is PWA(Progressive Web Application), where you can find and read posts on the most popular topics. In ProBlog app Contentful CMS helps to manage the app's content. The App has a fully responsive layout. Private repository",
+        "ProBlog is Progressive Web Application with Blog functionality, where people can find and read articles on the most popular topics. In this app Contentful CMS platform helps to manage the app's content. The App has a fully responsive layout. Private repository",
       descText2:
         "Next.js, TypeScript, Tailwind CSS, Contentful CMS, Firebase and PWA.",
       socials: [

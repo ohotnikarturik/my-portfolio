@@ -37,9 +37,12 @@ const HomeSection = ({ state }) => {
                     <SectionTitle title={"Junior Full Stack Developer"} />
                   </div>
                   <div className={style.desc}>
-                    <h4 className={style.descText}>
+                    <div className={style.descText}>
+                      I am a developer with a visual eye for web experiences.
+                    </div>
+                    <div className={style.descText}>
                       I can build web and mobile applications.
-                    </h4>
+                    </div>
                   </div>
                   <div className={style.desc}>
                     <div className={style.descText}>
@@ -48,7 +51,7 @@ const HomeSection = ({ state }) => {
                         <use href={sprite + "#heart"} />
                       </svg>{" "}
                       to code every day. I like to create something new all the
-                      time. Meet new challenges and solve them. 
+                      time. Meet new challenges and solve them.
                     </div>
                   </div>
                   <div className={style.linksContainer}>
