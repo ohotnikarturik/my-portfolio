@@ -58,9 +58,10 @@ const HomeSection = ({ state }) => {
                     <div className={style.myCvContainer}>
                       <NavLink
                         className={style.link}
-                        to="/files/my-cv.pdf"
-                        target="_blank"
-                        rel="noreferrer"
+                        // to="/files/my-cv.pdf"
+                        to="/"
+                        // target="_blank"
+                        // rel="noreferrer"
                       >
                         <div className={style.myCvTitle}>My CV</div>
                         <svg className={style.openFileImg}>
