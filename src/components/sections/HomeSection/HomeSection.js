@@ -34,7 +34,7 @@ const HomeSection = ({ state }) => {
               <div className={`container ${style.container}`}>
                 <div className={style.descContainer}>
                   <div className={style.profession}>
-                    <SectionTitle title={"Junior Full Stack Developer"} />
+                    <SectionTitle title={"Software Developer"} />
                   </div>
                   <div className={style.desc}>
                     <div className={style.descText}>
