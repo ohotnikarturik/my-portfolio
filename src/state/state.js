@@ -8,6 +8,7 @@ import work5 from "../assets/img/content/myWorks/work-5.jpg"
 import work6 from "../assets/img/content/myWorks/work-6.jpg"
 import work7 from "../assets/img/content/myWorks/work-7.jpg"
 import work8 from "../assets/img/content/myWorks/work-8.jpg"
+import work9 from "../assets/img/content/myWorks/work-9.jpg"
 
 import certificateImg1 from "../assets/img/content/myCertificates/cert2.jpg"
 import certificateImg2 from "../assets/img/content/myCertificates/cert1.jpg"
@@ -51,6 +52,29 @@ const state = {
     },
   ],
   works: [
+    {
+      id: 9,
+      subtitle: "Electricity Price",
+      descText1: "Track today's electricity spot price in Finland 🇫🇮",
+      descText2: "Next.js, TypeScript, Material UI, Recharts and Nordpool API.",
+      socials: [
+        {
+          id: 1,
+          ariaLabel: "Link to github",
+          img: "git",
+          link: "https://github.com/ohotnikarturik/electricity-price",
+          socialName: "GitHub ",
+        },
+        {
+          id: 2,
+          ariaLabel: "Link to website",
+          img: "openPage",
+          link: "https://electricity-price-eight.vercel.app/",
+          socialName: "Demo",
+        },
+      ],
+      img: work9,
+    },
     {
       id: 8,
       subtitle: "ProBlog",
