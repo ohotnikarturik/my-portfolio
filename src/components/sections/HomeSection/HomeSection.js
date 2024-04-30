@@ -41,17 +41,17 @@ const HomeSection = ({ state }) => {
                       I am a developer with a visual eye for web experiences.
                     </div>
                     <div className={style.descText}>
-                      I can build web and mobile applications.
-                    </div>
-                  </div>
-                  <div className={style.desc}>
-                    <div className={style.descText}>
                       Code is my passion. I love{" "}
                       <svg className={style.heartImg}>
                         <use href={sprite + "#heart"} />
                       </svg>{" "}
-                      to code every day. I like to create something new all the
-                      time. Meet new challenges and solve them.
+                      to code every day.
+                    </div>
+                    <div className={style.descText}>
+                      I like to create something new all the time,
+                    </div>
+                    <div className={style.descText}>
+                      meet new challenges and solve them.
                     </div>
                   </div>
                   <div className={style.linksContainer}>
