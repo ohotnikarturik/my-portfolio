@@ -55,8 +55,10 @@ const state = {
     {
       id: 9,
       subtitle: "Electricity Price",
-      descText1: "Track today's electricity spot price in Finland 🇫🇮",
-      descText2: "Next.js, TypeScript, Material UI, Recharts and Nordpool API.",
+      descText1:
+        "Today's real-time electricity price tracker for the Finnish market 🇫🇮",
+      descText2:
+        "Next.js, TypeScript, Material UI, Recharts and Unofficial Nordpool API.",
       socials: [
         {
           id: 1,
@@ -87,7 +89,7 @@ const state = {
           id: 1,
           ariaLabel: "Link to github",
           img: "git",
-          link: "https://github.com/",
+          link: "https://github.com/ohotnikarturik/pro-blog",
           socialName: "GitHub ",
         },
         {
@@ -119,7 +121,7 @@ const state = {
           id: 2,
           ariaLabel: "Link to website",
           img: "openPage",
-          link: "https://ohotnikarturik-task-manager.herokuapp.com/",
+          link: "https://github.com/ohotnikarturik/task-manager-api",
           socialName: "Demo",
         },
       ],
@@ -241,7 +243,7 @@ const state = {
           id: 2,
           ariaLabel: "Link to website",
           img: "openPage",
-          link: "https://eloquent-benz-3bb6de.netlify.app/",
+          link: "https://github.com/ohotnikarturik/poroducts-country",
           socialName: "Demo",
         },
       ],
